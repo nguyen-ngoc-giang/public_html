@@ -1572,7 +1572,7 @@ h6 {
   z-index: 997; }
 
 #header.header-scrolled {
-  background: rgba(128, 80, 250, 0.9);
+  background: rgba(255, 255, 255, 0.9);
   transition: all 0.5s; }
 
 @media (max-width: 673px) {
@@ -1641,7 +1641,7 @@ h6 {
 
 /* Nav Menu Arrows */
 .sf-arrows .sf-with-ul {
-  padding-right: 30px; }
+  padding-right: 35px; }
 
 .sf-arrows .sf-with-ul:after {
   content: "\f107";
@@ -1663,9 +1663,9 @@ h6 {
   padding: 0 8px 0px 8px;
   text-decoration: none;
   display: inline-block;
-  color: #fff;
+  color: #000;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 30px;
   text-transform: uppercase;
   outline: none; }
 
@@ -1683,10 +1683,10 @@ h6 {
 
 .nav-menu ul li a {
   padding: 10px;
-  color: #333;
+  color: #000;
   transition: 0.3s;
   display: block;
-  font-size: 12px;
+  font-size: 20px;
   text-transform: none; }
 
 .nav-menu ul li:hover > a {
@@ -1800,11 +1800,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #fff; }
 
 .banner-area {
-  background: linear-gradient(0deg, rgba(128, 80, 250, 0.8), rgba(128, 80, 250, 0.8)), url(../img/banner-bg.jpg) no-repeat center;
-  background: -webkit-linear-gradient(0deg, rgba(128, 80, 250, 0.8), rgba(128, 80, 250, 0.8)), url(../img/banner-bg.jpg) no-repeat center;
-  background: -moz-linear-gradient(0deg, rgba(128, 80, 250, 0.8), rgba(128, 80, 250, 0.8)), url(../img/banner-bg.jpg) no-repeat center;
-  background: -ms-linear-gradient(0deg, rgba(128, 80, 250, 0.8), rgba(128, 80, 250, 0.8)), url(../img/banner-bg.jpg) no-repeat center;
-  background: -o-linear-gradient(0deg, rgba(128, 80, 250, 0.8), rgba(128, 80, 250, 0.8)), url(../img/banner-bg.jpg) no-repeat center;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(../img/banner-bg.jpg) no-repeat center;
+  background: -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(../img/banner-bg.jpg) no-repeat center;
+  background: -moz-linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(../img/banner-bg.jpg) no-repeat center;
+  background: -ms-linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(../img/banner-bg.jpg) no-repeat center;
+  background: -o-linear-gradient(0deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(../img/banner-bg.jpg) no-repeat center;
   background-size: cover; }
   .banner-area .primary-btn {
     padding-left: 30px;
@@ -1814,7 +1814,7 @@ body.mobile-nav-active #mobile-nav-toggle {
       height: 500px !important; } }
 
 .banner-content h1 {
-  color: #fff;
+  color: #000;
   font-size: 60px;
   font-weight: 300;
   line-height: 72px; }
