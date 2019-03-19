@@ -119,9 +119,15 @@ function create_calendar(month, year) {
     
 	tbl.appendChild(tbdy);
 	
-	
-	var dt = new Date(month.toString()+"/1/"+year.toString);
+			
+	var dt = new Date(month.toString()+"/1/"+year.toString());
+	var date = dt.getDate();
 	var day = dt.getDay();
+	
+	var n_dt = new Date();
+	var n_year = n_dt.getFullYear();
+	var n_month = n_dt.getMonth();
+	var n_date = n_dt.getDate();
 	
 	var start_day = 7 + day - date%7 + 1;
 	start_day = start_day % 7;
@@ -134,8 +140,7 @@ function create_calendar(month, year) {
 			row = parseInt(i/7) + 1;
 			cell = i%7;
 			tbl.rows[row].cells[cell].innerHTML = i_date.toString();
-			if (i_date == date) {
-			//document.getElementById("table_1").rows[row].cells[cell].className += " the-date-today = \"today\""; 
+			if (year == n_year && (month-1) == n_month && i_date == n_date) {
 				tbl.rows[row].cells[cell].setAttribute("the-date-today", "today"); 
 			}
 			i_date = i_date + 1;
