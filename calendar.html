@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Calendar Mockup</title>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  
+      <link rel="stylesheet" title="calendar" href="css/calendar.css">
+
+  
+</head>
+
+<body>
+  
+<main>
+  <!--table class="calendar" id="table_1">
+    <caption class="calendar__banner--month">
+      <h1 id='month'>a</h1>
+	  <h1 id='year'>b</h1>
+    </caption>
+    <thead>
+      <tr>
+        <th class="calendar__day__header">Sun</th>
+        <th class="calendar__day__header">Mon</th>
+        <th class="calendar__day__header">Tues</th>
+        <th class="calendar__day__header">Wed</th>
+        <th class="calendar__day__header">Thurs</th>
+        <th class="calendar__day__header">Fri</th>
+        <th class="calendar__day__header">Sat</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+      </tr>
+      <tr>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+      </tr>
+      <tr>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+      </tr>
+      <tr>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+      </tr>
+      <tr>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+        <td class="calendar__day__cell"></td>
+      </tr>
+    </tbody>
+  </table-->
+</main>
+
+<script>
+
+
+function create_calendar(month, year) {
+	var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+	var days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+	
+	var main = document.getElementsByTagName('main')[0];
+	var tbl = document.createElement('table');
+	tbl.className = "calendar";
+	tbl.id = month.toString()+"_"+year.toString;
+	
+	var cap = tbl.createCaption();
+	cap.className = "calendar__banner--month";
+	cap.innerHTML = "<h1>"+months[month-1]+"</h1><h1>"+year.toString()+"</h1>";
+	
+	var thead = tbl.createTHead();
+	var hrow = thead.insertRow(0);
+	for (var i = 0; i < 7; i++) {
+		var cell = hrow.insertCell(-1);
+		cell.className = "calendar__day__header";
+		cell.innerHTML = days[i];
+	}
+	
+	
+	var tbdy = document.createElement('tbody');
+	for (var i = 0; i < 5; i++) {
+		var tr = document.createElement('tr');
+		for (var j = 0; j < 7; j++) {
+			var td = document.createElement('td');
+			td.className = "calendar__day__cell";
+			tr.appendChild(td)
+		}
+		tbdy.appendChild(tr);
+	}
+    
+	tbl.appendChild(tbdy);
+	
+	
+	var dt = new Date(month.toString()+"/1/"+year.toString);
+	var day = dt.getDay();
+	
+	var start_day = 7 + day - date%7 + 1;
+	start_day = start_day % 7;
+
+	var i_date = 1;
+	var row;
+	var cell;
+	for (var i = start_day; i < 35; i++) {
+		if (i_date <32) {
+			row = parseInt(i/7) + 1;
+			cell = i%7;
+			tbl.rows[row].cells[cell].innerHTML = i_date.toString();
+			if (i_date == date) {
+			//document.getElementById("table_1").rows[row].cells[cell].className += " the-date-today = \"today\""; 
+				tbl.rows[row].cells[cell].setAttribute("the-date-today", "today"); 
+			}
+			i_date = i_date + 1;
+		}
+		else {
+			break;
+		}
+	}
+	
+	main.appendChild(tbl);
+	
+}
+
+create_calendar(3, 2019);
+create_calendar(4, 2019);
+create_calendar(5, 2019);
+
+/*function getStyleSheet(unique_title) {
+	for(var i=0; i<document.styleSheets.length; i++) {
+		var sheet = document.styleSheets[i];
+		if(sheet.title == unique_title) {
+			return sheet;
+		}
+	}
+}
+
+function getStyle(className) {
+    var classes = document.styleSheets[0].rules || document.styleSheets[0].cssRules;
+    for (var x = 0; x < classes.length; x++) {
+        if (classes[x].selectorText == className) {
+            (classes[x].cssText) ? alert(classes[x].cssText) : alert(classes[x].style.cssText);
+        }
+    }
+}*/
+
+
+
+//var calendar_style = getStyleSheet("calendar");
+
+var d = new Date()
+var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+var month = d.getMonth();
+var year = d.getFullYear();
+var date = d.getDate();
+var day = d.getDay();
+document.getElementById('month').innerHTML = months[month];
+document.getElementById('year').innerHTML = year.toString();
+
+var start_day = 7 + day - date%7 + 1;
+start_day = start_day % 7;
+
+var i;
+var text;
+var i_date = 1;
+var row;
+var cell;
+for (i = start_day; i < 35; i++) {
+	if (i_date <32) {
+		row = parseInt(i/7) + 1;
+		cell = i%7;
+		text = 'c_' + i.toString();
+		document.getElementById("table_1").rows[row].cells[cell].innerHTML = i_date.toString();
+		if (i_date == date) {
+			//document.getElementById("table_1").rows[row].cells[cell].className += " the-date-today = \"today\""; 
+			document.getElementById("table_1").rows[row].cells[cell].setAttribute("the-date-today", "today"); 
+		}
+		i_date = i_date + 1;
+	}
+	else {
+		break;
+	}
+}
+
+</script>  
+  
+</body>
+</html>
