@@ -79,7 +79,7 @@ function create_calendar(month, year) {
 		if (i_date <32) {
 			row = parseInt(i/7) + 1;
 			cell = i%7;
-			tbl.rows[row].cells[cell].innerHTML = "<a href=\"" + path_to_folder + i_date.toString() + ".html\">" + i_date.toString() + "<\a>";
+			tbl.rows[row].cells[cell].innerHTML = "";//"<a href=\"" + path_to_folder + i_date.toString() + ".html\">" + i_date.toString() + "<\a>";
 			if (year == n_year && (month-1) == n_month && i_date == n_date) {
 				tbl.rows[row].cells[cell].setAttribute("the-date-today", "today"); 
 			}

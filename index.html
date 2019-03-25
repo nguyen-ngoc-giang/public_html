@@ -706,7 +706,28 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="js/main.js"></script>
 	
 	<script>
-
+	
+	function readTextFile(file)
+	{
+		var rawFile = new XMLHttpRequest();
+		rawFile.open("GET", file, false);
+		rawFile.onreadystatechange = function ()
+		{
+			if(rawFile.readyState === 4)
+			{
+				if(rawFile.status === 200 || rawFile.status == 0)
+				{
+					var allText = rawFile.responseText;
+					alert(allText);
+				}
+			}
+		}
+		rawFile.send(null);
+	}
+	var loc = window.location.pathname;
+	//alert(loc);
+	//readTextFile("E:/public_html/text.txt");
+	var fs = require("fs");
 	function create_calendar(month, year) {
 		var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 		var days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -762,7 +783,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 			if (i_date <32) {
 				row = parseInt(i/7) + 1;
 				cell = i%7;
-				tbl.rows[row].cells[cell].innerHTML = "<a href=\"" + path_to_folder + i_date.toString() + ".html\">" + i_date.toString() + "<\a>";
+				if (i_date==10) tbl.rows[row].cells[cell].innerHTML = "<a href=\"" + path_to_folder + i_date.toString() + ".html\">adflasdlf alsdjflkasd fl alsdkfja sldfajsdfl sdfsa lfdlfafsdj<\a>";//"<a href=\"" + path_to_folder + i_date.toString() + ".html\">" + i_date.toString() + "<\a>";
+				tbl.rows[row].cells[cell].setAttribute("the-date", i_date.toString());
 				if (year == n_year && (month-1) == n_month && i_date == n_date) {
 					tbl.rows[row].cells[cell].setAttribute("the-date-today", "today"); 
 				}
