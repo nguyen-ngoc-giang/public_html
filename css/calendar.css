@@ -27,12 +27,17 @@ main {
   width: 100%;
 }
 
-.calendar__day__header,
-.calendar__day__cell {
+.calendar__day__header {
   border: 2px solid #e66053;
   text-align: center;
   width: 100% / 7;
   vertical-align: middle;
+}
+.calendar__day__cell {
+  border: 2px solid #e66053;
+  text-align: top;
+  width: 100% / 7;
+  vertical-align: left;
 }
 .calendar__day__header:first-child,
 .calendar__day__cell:first-child {
@@ -45,7 +50,7 @@ main {
 
 .calendar__day__header,
 .calendar__day__cell {
-  padding: .75rem 0 1.5rem;
+  padding: .5rem 0 3.5rem;
 }
 
 .calendar__banner--month {
@@ -71,7 +76,7 @@ main {
 }
 
 .calendar__day__cell {
-  font-size: 3rem;
+  font-size: 1.5rem;
   position: relative;
 }
 
