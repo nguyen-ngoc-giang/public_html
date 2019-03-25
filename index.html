@@ -704,8 +704,13 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="js/waypoints.min.js"></script>
 	<script src="js/mail-script.js"></script>
 	<script src="js/main.js"></script>
-	<script src="js/brief.js"></script>
+	<script src="logs/brief.js"></script>
 	<script>
+	function parse_month_date(m) {
+		return m < 10 ? "0"+m.toString() : m.toString(); 
+	}
+	
+	
 	function create_calendar(month, year) {
 		var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 		var days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -757,11 +762,17 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		var i_date = 1;
 		var row;
 		var cell;
+		var brief_key;
 		for (var i = start_day; i < 35; i++) {
 			if (i_date <32) {
 				row = parseInt(i/7) + 1;
 				cell = i%7;
-				tbl.rows[row].cells[cell].innerHTML = "<a href=\"" + path_to_folder + i_date.toString() + ".html\">" + "" + "<\a>";
+				brief_key=year.toString()+parse_month_date(month)+parse_month_date(i_date);
+				if (brief_key in brief) {
+					tbl.rows[row].cells[cell].innerHTML = "<a href=\"" + path_to_folder + i_date.toString() + ".html\">" + brief[brief_key] + "<\a>";
+				} else {
+					tbl.rows[row].cells[cell].innerHTML = "<a href=\"" + path_to_folder + i_date.toString() + ".html\">" + "" + "<\a>";
+				}
 				tbl.rows[row].cells[cell].setAttribute("the-date", i_date.toString());
 				if (year == n_year && (month-1) == n_month && i_date == n_date) {
 					tbl.rows[row].cells[cell].setAttribute("the-date-today", "today"); 
