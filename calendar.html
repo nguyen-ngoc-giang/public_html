@@ -15,74 +15,10 @@
 <body>
   
 <main>
-  <!--table class="calendar" id="table_1">
-    <caption class="calendar__banner--month">
-      <h1 id='month'>a</h1>
-	  <h1 id='year'>b</h1>
-    </caption>
-    <thead>
-      <tr>
-        <th class="calendar__day__header">Sun</th>
-        <th class="calendar__day__header">Mon</th>
-        <th class="calendar__day__header">Tues</th>
-        <th class="calendar__day__header">Wed</th>
-        <th class="calendar__day__header">Thurs</th>
-        <th class="calendar__day__header">Fri</th>
-        <th class="calendar__day__header">Sat</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="calendar__day__cell"></td>
-        <td class="calendar__day__cell"></td>
-        <td class="calendar__day__cell"></td>
-        <td class="calendar__day__cell"></td>
-        <td class="calendar__day__cell"></td>
-        <td class="calendar__day__cell"></td>
-        <td class="calendar__day__cell"></td>
-      </tr>
-      <tr>
-        <td class="calendar__day__cell"></td>
-        <td class="calendar__day__cell"></td>
-        <td class="calendar__day__cell"></td>
-        <td class="calendar__day__cell"></td>
-        <td class="calendar__day__cell"></td>
-        <td class="calendar__day__cell"></td>
-        <td class="calendar__day__cell"></td>
-      </tr>
-      <tr>
-        <td class="calendar__day__cell"></td>
-        <td class="calendar__day__cell"></td>
-        <td class="calendar__day__cell"></td>
-        <td class="calendar__day__cell"></td>
-        <td class="calendar__day__cell"></td>
-        <td class="calendar__day__cell"></td>
-        <td class="calendar__day__cell"></td>
-      </tr>
-      <tr>
-        <td class="calendar__day__cell"></td>
-        <td class="calendar__day__cell"></td>
-        <td class="calendar__day__cell"></td>
-        <td class="calendar__day__cell"></td>
-        <td class="calendar__day__cell"></td>
-        <td class="calendar__day__cell"></td>
-        <td class="calendar__day__cell"></td>
-      </tr>
-      <tr>
-        <td class="calendar__day__cell"></td>
-        <td class="calendar__day__cell"></td>
-        <td class="calendar__day__cell"></td>
-        <td class="calendar__day__cell"></td>
-        <td class="calendar__day__cell"></td>
-        <td class="calendar__day__cell"></td>
-        <td class="calendar__day__cell"></td>
-      </tr>
-    </tbody>
-  </table-->
+  
 </main>
 
 <script>
-
 
 function create_calendar(month, year) {
 	var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -119,7 +55,10 @@ function create_calendar(month, year) {
     
 	tbl.appendChild(tbdy);
 	
-			
+	//var fs = require('fs');
+	//var path = require('path');
+	var path_to_folder = "logs/" + year.toString() + "/" + months[month-1] + "/";
+	
 	var dt = new Date(month.toString()+"/1/"+year.toString());
 	var date = dt.getDate();
 	var day = dt.getDay();
@@ -128,10 +67,11 @@ function create_calendar(month, year) {
 	var n_year = n_dt.getFullYear();
 	var n_month = n_dt.getMonth();
 	var n_date = n_dt.getDate();
-	
+	//var loc = window.location.pathname;
+	//var path = loc.split("/");
 	var start_day = 7 + day - date%7 + 1;
 	start_day = start_day % 7;
-
+	
 	var i_date = 1;
 	var row;
 	var cell;
@@ -139,7 +79,7 @@ function create_calendar(month, year) {
 		if (i_date <32) {
 			row = parseInt(i/7) + 1;
 			cell = i%7;
-			tbl.rows[row].cells[cell].innerHTML = i_date.toString();
+			tbl.rows[row].cells[cell].innerHTML = "<a href=\"" + path_to_folder + i_date.toString() + ".html\">" + i_date.toString() + "<\a>";
 			if (year == n_year && (month-1) == n_month && i_date == n_date) {
 				tbl.rows[row].cells[cell].setAttribute("the-date-today", "today"); 
 			}
@@ -179,7 +119,7 @@ function getStyle(className) {
 
 
 //var calendar_style = getStyleSheet("calendar");
-
+/*
 var d = new Date()
 var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 var month = d.getMonth();
@@ -213,7 +153,7 @@ for (i = start_day; i < 35; i++) {
 		break;
 	}
 }
-
+*/
 </script>  
   
 </body>
