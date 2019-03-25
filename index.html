@@ -21,6 +21,7 @@
 	<!--
 			CSS
 			============================================= -->
+	<link rel="stylesheet" title="calendar" href="css/calendar.css">
 	<link rel="stylesheet" href="css/linearicons.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
@@ -192,7 +193,8 @@
 				<div class="col-lg-8 post-list">
 					<!-- Start Post Area -->
 					<section class="post-area">
-						<div class="single-post-item">
+						<main> </main>
+						<!--div class="single-post-item">
 							<figure>
 								<img class="post-img img-fluid" src="img/posts/p1.jpg" alt="">
 							</figure>
@@ -244,7 +246,7 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</div-->
 
 						<!--div class="single-post-item">
 							<figure>
@@ -702,6 +704,83 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="js/waypoints.min.js"></script>
 	<script src="js/mail-script.js"></script>
 	<script src="js/main.js"></script>
+	
+	<script>
+
+	function create_calendar(month, year) {
+		var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+		var days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+	
+		var main = document.getElementsByTagName('main')[0];
+		var tbl = document.createElement('table');
+		tbl.className = "calendar";
+		tbl.id = month.toString()+"_"+year.toString;
+		
+		var cap = tbl.createCaption();
+		cap.className = "calendar__banner--month";
+		cap.innerHTML = "<h1>"+months[month-1]+"</h1><h1>"+year.toString()+"</h1>";
+	
+		var thead = tbl.createTHead();
+		var hrow = thead.insertRow(0);
+		for (var i = 0; i < 7; i++) {
+			var cell = hrow.insertCell(-1);
+			cell.className = "calendar__day__header";
+			cell.innerHTML = days[i];
+		}
+	
+	
+		var tbdy = document.createElement('tbody');
+		for (var i = 0; i < 5; i++) {
+			var tr = document.createElement('tr');
+			for (var j = 0; j < 7; j++) {
+				var td = document.createElement('td');
+				td.className = "calendar__day__cell";
+				tr.appendChild(td)
+			}
+			tbdy.appendChild(tr);
+		}
+    
+		tbl.appendChild(tbdy);
+	
+		var path_to_folder = "logs/" + year.toString() + "/" + months[month-1] + "/";
+	
+		var dt = new Date(month.toString()+"/1/"+year.toString());
+		var date = dt.getDate();
+		var day = dt.getDay();
+	
+		var n_dt = new Date();
+		var n_year = n_dt.getFullYear();
+		var n_month = n_dt.getMonth();
+		var n_date = n_dt.getDate();
+		var start_day = 7 + day - date%7 + 1;
+		start_day = start_day % 7;
+	
+		var i_date = 1;
+		var row;
+		var cell;
+		for (var i = start_day; i < 35; i++) {
+			if (i_date <32) {
+				row = parseInt(i/7) + 1;
+				cell = i%7;
+				tbl.rows[row].cells[cell].innerHTML = "<a href=\"" + path_to_folder + i_date.toString() + ".html\">" + i_date.toString() + "<\a>";
+				if (year == n_year && (month-1) == n_month && i_date == n_date) {
+					tbl.rows[row].cells[cell].setAttribute("the-date-today", "today"); 
+				}
+				i_date = i_date + 1;
+			}
+			else {
+				break;
+			}
+		}
+	
+		main.appendChild(tbl);
+	
+	}
+
+	create_calendar(3, 2019);
+	//create_calendar(4, 2019);
+	//create_calendar(5, 2019);
+</script>
 </body>
 
 </html>

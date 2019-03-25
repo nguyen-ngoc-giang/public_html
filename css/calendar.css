@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
-body {
+/*body {
   background-color: #ffffff;
   color: #4E4F4A;
   display: -webkit-box;
@@ -14,7 +14,7 @@ body {
   font-family: 'Montserrat';
   font-weight: 700;
   min-height: 100vh;
-}
+}*/
 
 main {
   background-color: #F6E9DC;
@@ -50,6 +50,7 @@ main {
 
 .calendar__banner--month {
   text-align: center;
+  caption-side: top;
   padding: .75rem;
 }
 .calendar__banner--month h1 {
@@ -64,13 +65,13 @@ main {
 }
 
 .calendar__day__header {
-  font-size: 1rem;
+  font-size: 1.2rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 .calendar__day__cell {
-  font-size: 4rem;
+  font-size: 3rem;
   position: relative;
 }
 
