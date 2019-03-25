@@ -19,7 +19,7 @@
 main {
   background-color: #F6E9DC;
   -ms-flex-preferred-size: 980px;
-      flex-basis: 980px;
+  flex-basis: 980px;  
 }
 
 .calendar {
@@ -53,7 +53,7 @@ main {
 .calendar__banner--month {
   text-align: center;
   caption-side: top;
-  padding: .75rem;
+  padding: 5rem 0 .5rem;
 }
 .calendar__banner--month h1 {
   background-color: #4E4F4A;
