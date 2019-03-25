@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
-
+<script>var today="03/25/2019"</script>
 <head>
 	<!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,8 +15,8 @@
 	<!-- meta character set -->
 	<meta charset="UTF-8">
 	<!-- Site Title -->
-	<title>Template Ver 0.0.1</title>
-
+	<title id="title"></title>
+	<script>document.getElementById("title").innerHTML=today</script>
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Roboto:400,500" rel="stylesheet">
 	<!--
 			CSS
@@ -88,21 +88,27 @@
             <div class="row d-flex align-items-center justify-content-center">
                 <div class="col-lg-8">
                     <div class="main_blog_details">
-                        <img class="img-fluid" src="../../../img/blog/news-blog.jpg" alt="">
-                        <h4>Cartridge Is Better Than Ever <br /> A Discount Toner</h4>
+                        <h4>Create my log page</h4>
                         <div class="user_details">
                             <div class="float-left">
-                                <a href="#">Lifestyle</a>
-                                <a href="#">Gadget</a>
+                                <a>preparation</a>
+                                <a>web</a>
                             </div>
                             <div class="float-right">
                                 <div class="media">
                                     <div class="media-body">
-                                        <h5>Mark wiens</h5>
-                                        <p>12 Dec, 2017 11:21 am</p>
+                                        <!--h5>Mark wiens</h5-->
+                                        <p id="date">
+											<script>
+												var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+												var days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thuday", "Friday", "Saturday"];
+												var d = new Date(today);
+												document.getElementById("date").innerHTML=days[d.getDay()]+", "+months[d.getMonth()]+" "+d.getDate()+", "+d.getFullYear();
+											</script>
+										</p>
                                     </div>
                                     <div class="d-flex">
-                                        <img src="../../../img/blog/user-img.jpg" alt="">
+                                        <img src="25/blogs.jpg" alt="">
                                     </div>
                                 </div>
                             </div>
