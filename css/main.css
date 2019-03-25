@@ -569,7 +569,7 @@ th {
   margin-right: 0; }
 
 .section-gap {
-  padding: 120px 0; }
+  padding: 20px 0; }
   @media (max-width: 767px) {
     .section-gap {
       padding: 60px 0; } }
@@ -2720,10 +2720,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-top: 30px; }
 
 .footer-bottom {
-  padding-top: 50px; }
+  padding-top: 10px; }
   @media (max-width: 991px) {
     .footer-bottom {
-      padding-top: 20px; } }
+      padding-top: 10px; } }
   .footer-bottom .footer-text {
     margin-bottom: 0px; }
     .footer-bottom .footer-text i {
