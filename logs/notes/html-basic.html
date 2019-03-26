@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<!-- ********************************************************************************Remember to edit this****************************************************************** -->
+<script>
+	var create="03/26/2019"
+	var update="03/26/2019"
+</script> 
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="../../img/logo.png">
+	<!-- Author Meta -->
+	<meta name="author" content="nguyen">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title id="title"></title>
+	<script>html-basic</script>
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Roboto:400,500" rel="stylesheet">
+	<!--
+			CSS
+			============================================= -->
+	<link rel="stylesheet" title="calendar" href="../../css/calendar.css">
+	<link rel="stylesheet" href="../../css/linearicons.css">
+	<link rel="stylesheet" href="../../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../css/bootstrap.css">
+	<link rel="stylesheet" href="../../css/magnific-popup.css">
+	<link rel="stylesheet" href="../../css/nice-select.css">
+	<link rel="stylesheet" href="../../css/animate.min.css">
+	<link rel="stylesheet" href="../../css/owl.carousel.css">
+	<link rel="stylesheet" href="../../css/main.css">
+	<link rel="stylesheet" href="../../css/two-columns.css">
+</head>
+
+<body>
+	<!-- Start header Area -->
+	<header id="header">
+		<div class="container box_1170 main-menu">
+			<div class="row align-items-center justify-content-between d-flex">
+				<div id="logo">
+					<a href="index.html"><img src="../../img/logo.png" alt="" title="" /></a>
+				</div>
+				<nav id="nav-menu-container">
+					<ul class="nav-menu">
+						<li><a href="#">Top</a></li>
+						<li class="menu-active"><a href="../../../index.html">Home</a></li>
+						<li><a href="../../../contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<!-- End header Area -->
+
+    <!-- start banner Area -->
+    <section class="banner-area relative section-gap">
+        <div class="overlay overlay-bg"></div>
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="about-content col-lg-12">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End banner Area -->
+
+    <!-- Blog Area -->
+    <section class="blog_area section-gap single-post-area">
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="col-lg-8">
+                    <div class="main_blog_details">
+                        <img class="img-fluid" src="html-basic/html.png" alt="">
+                        <h4>HTML Basic</h4>
+                        <div class="user_details">
+                            <div class="float-left">
+                                <a>HTML</a>
+								<a>Web</a>
+                                <a>Notes</a>
+                            </div>
+                            <div class="float-right">
+                                <div class="media">
+                                    <div class="media-body">
+                                        <p id="create_date"></p>
+										<p id="update_date"></p>
+										<script>
+											var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+											var days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thuday", "Friday", "Saturday"];
+											var cd = new Date(create);
+											var ud = new Date(update);
+											document.getElementById("create_date").innerHTML="<b>Created: </b>"+days[cd.getDay()]+", "+months[cd.getMonth()]+" "+cd.getDate()+", "+cd.getFullYear();
+											document.getElementById("update_date").innerHTML="<b>Updated: </b>"+days[ud.getDay()]+", "+months[ud.getMonth()]+" "+ud.getDate()+", "+ud.getFullYear();
+										</script>										
+                                    </div>
+                                    <div class="d-flex">
+                                        <!--img src="../../img/blog/user-img.jpg" alt=""-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<ul>
+							<li><h2>Basic HTML Structure</h2></li>
+							<pre><code>
+&lt;html&gt;
+	&lt;head&gt;
+	&lt;title&gt;website title&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		content of website ...
+	&lt;/body&gt;
+&lt;/html&gt;
+	<table>
+	<tbody><tr><th class="head3" id="basics"><h2>Common Tags for Blogs</h2></th>
+	<tr><td class="code">&lt;h?&gt; heading &lt;/h?&gt;</td><td>Heading (h1 for largest to h6 for smallest)</td></tr>
+	<tr><td class="code">&lt;p&gt; paragraph &lt;/p&gt;</td><td>Paragraph of Text</td></tr>
+	<tr><td class="code">&lt;b&gt; bold &lt;/b&gt;</td><td>Make text between tags <b>bold</b></td></tr>
+	<tr><td class="code">&lt;i&gt; italic &lt;/i&gt;</td><td>Make text between tags <i>italic</i></td></tr>
+	<tr><td class="code">&lt;a href="<i>url</i>"&gt; link name &lt;/a&gt;</td><td>Create a link to another page or website</td></tr>
+	<tr><td class="code">&lt;div&gt; ... &lt;/div&gt;</td><td>Divide up page content into sections, and applying styles</td></tr>
+	<tr><td class="code">&lt;img src="<i>filename.jpg</i>"&gt;</td> <td>Show an image</td></tr>
+	<tr><td class="code">&lt;ul&gt; &lt;li&gt; list &lt;/li&gt; &lt;/ul&gt;</td><td>Unordered, bullet-point list</td></tr>
+	<tr><td class="code">&lt;br&gt;</td> <td>Line Break (force a new line)</td></tr>
+	<tr><td class="code">&lt;span style="color:red"&gt; <i> red </i> &lt;/span&gt;</td> <td>Use CSS style to change text colour</td></tr>
+	</tbody></table><hr>
+	<table>
+	<tbody><tr><th class="head3" id="text"><h2>Text Formatting</h2></th>
+	<tr><td class="code">&lt;h?&gt; ... &lt;/h?&gt;</td><td>Heading (?= 1 for largest to 6 for smallest, eg h1)</td></tr>
+	<tr><td class="code">&lt;b&gt; ... &lt;/b&gt;</td><td>Bold Text</td></tr>
+	<tr><td class="code">&lt;i&gt; ... &lt;/i&gt;</td><td>Italic Text</td></tr>
+	<tr><td class="code">&lt;u&gt; ... &lt;/u&gt;</td><td>Underline Text</td></tr>
+	<tr><td class="code">&lt;strike&gt; ... &lt;/strike&gt;</td><td>Strikeout</td></tr>
+	<tr><td class="code">&lt;sup&gt; ... &lt;/sup&gt;</td><td>Superscript - Smaller text placed below normal text</td></tr>
+	<tr><td class="code">&lt;sub&gt; ... &lt;/sub&gt;</td><td>Subscript - Smaller text placed below normal text</td></tr>
+	<tr><td class="code">&lt;small&gt; ... &lt;/small&gt;</td><td>Small - Fineprint size text</td></tr>
+	<tr><td class="code">&lt;tt&gt; ... &lt;/tt&gt;</td><td>Typewriter Text</td></tr>
+	<tr><td class="code">&lt;pre&gt; ... &lt;/pre&gt;</td><td>Pre-formatted Text</td></tr>
+	<tr><td class="code">&lt;blockquote&gt; ... &lt;/blockquote&gt;</td><td>Text Block Quote</td></tr>
+	<tr><td class="code">&lt;strong&gt; ... &lt;/strong&gt;</td><td>Strong - Shown as Bold in most browsers</td></tr>
+	<tr><td class="code">&lt;em&gt; ... &lt;/em&gt;</td><td>Emphasis - Shown as Italics in most browsers</td></tr>
+	<tr><td class="code">&lt;font&gt; ... &lt;/font&gt;</td><td>Font tag obsolete, use <a href="http://www.simplehtmlguide.com/whatiscss.php">CSS</a>. <a href="#superseded">(*)</a></td></tr>
+	</tbody></table><hr>
+	<table>
+	<tbody><tr><th class="head3" id="sections"><h2>Section Divisions</h2></th>
+	<tr><td class="code">&lt;div&gt; ... &lt;/div&gt;</td><td>Division or Section of Page Content</td></tr>
+	<tr><td class="code">&lt;span&gt; ... &lt;/span&gt;</td><td>Section of text within other content</td></tr>
+	<tr><td class="code">&lt;p&gt; ... &lt;/p&gt;</td><td>Paragraph of Text</td></tr>
+	<tr><td class="code">&lt;br&gt;</td> <td>Line Break</td></tr>
+	<tr><td class="code">&lt;hr&gt;</td> <td>Basic Horizontal Line</td></tr>
+	<tr><td class="attrhead">&lt;hr&gt; Tag Attributes:</td><td>&nbsp;</td></tr>
+	<tr><td class="codeindt">size="?"</td><td>Line Thickness in pixels</td></tr>
+	<tr><td class="codeindt">width="?"</td><td>Line Width in pixels</td></tr>
+	<tr><td class="codeindt">width="??%"</td><td>Line Width as a percentage</td></tr>
+	<tr><td class="codeindt">color="#??????"</td> <td>Line <a href="http://www.simplehtmlguide.com/colours.php">Colour</a> <a href="#superseded">(*)</a></td></tr>
+	<tr><td class="codeindt">align="?"</td> <td>Horizontal Alignment: <code>left, center, right</code> <a href="#superseded">(*)</a></td></tr>
+	<tr><td class="codeindt">noshade</td><td>No 3D cut-out</td></tr>
+	<tr><td class="code">&lt;nobr&gt; ... &lt;/nobr&gt;</td> <td>Line Break</td></tr>
+	</tbody></table><hr>
+	<table>
+	<tbody><tr><th class="head3" id="images"><h2>Images</h2></th>
+	<tr><td class="code">&lt;img src="<i>url</i>" alt="<i>text</i>"&gt;</td> <td>Basic Image</td></tr>
+	<tr><td class="attrhead">&lt;img&gt; Tag Attributes:</td><td>&nbsp;</td></tr>
+	<tr><td class="codeindt">src="<i>url</i>"</td><td>URL or filename of image (required!)</td></tr>
+	<tr><td class="codeindt">alt="<i>text</i>"</td><td>Alternate Text (required!)</td></tr>
+	<tr><td class="codeindt">align="?"</td><td>Image alignment within surrounding text <a href="#superseded">(*)</a></td></tr>
+	<tr><td class="codeindt">width="??"</td><td>Image width (in pixels or %)</td></tr>
+	<tr><td class="codeindt">height="??"</td><td>Image height (in pixels or %)</td></tr>
+	<tr><td class="codeindt">border="??"</td><td>Border thickness (in pixels) <a href="#superseded">(*)</a></td></tr>
+	<tr><td class="codeindt">vspace="??"</td><td>Space above and below image (in pixels) <a href="#superseded">(*)</a></td></tr>
+	<tr><td class="codeindt">hspace="??"</td><td>Space on either side of image (in pixels) <a href="#superseded">(*)</a></td></tr>
+	</tbody></table><hr>
+	<table>
+	<tbody><tr><th class="head3" id="linking"><h2>Linking Tags</h2></th>
+	<tr><td class="code">&lt;a href="<i>url</i>"&gt; <i>link text</i> &lt;/a&gt;</td><td>Basic Link</td></tr>
+	<tr><td class="attrhead">&lt;a&gt; Tag Attributes:</td><td>&nbsp;</td></tr>
+	<tr><td class="codeindt">href="<i>url</i>"</td>	<td>Location (url) of page to link to.</td></tr>
+	<tr><td class="codeindt">name="??"</td>	<td>Name of link (name of anchor, or name of bookmark)</td></tr>
+	<tr><td class="codeindt">target="?"</td>	<td>Link target location: <code>_self, _blank, _top, _parent</code>.</td></tr>
+	<tr><td class="codeindt">href="<i>url#bookmark</i>"</td>	<td>Link to a bookmark (defined with <code>name</code> attribute).</td></tr>
+	<tr><td class="codeindt">href="mailto:<i>email</i>"</td>	<td>Link which initiates an email (dependant on user's email client).</td></tr>
+	</tbody></table><hr>
+	<table>
+	<tbody><tr><th class="head3" id="lists"><h2>Lists</h2></th>
+	<tr><td class="code">&lt;ol&gt; ... &lt;/ol&gt;</td><td>Ordered List</td></tr>
+	<tr><td class="code">&lt;ul&gt; ... &lt;/ul&gt;</td><td>Un-ordered List</td></tr>
+	<tr><td class="code">&lt;li&gt; ... &lt;/li&gt;</td><td>List Item (within ordered or unordered)</td></tr>
+	<tr><td class="code">&lt;ol type="<i>?</i>"&gt;</td>	<td>Ordered list type: <code> A, a, I, i, 1</code></td></tr>
+	<tr><td class="code">&lt;ol start="??"&gt;</td>	<td>Ordered list starting value</td></tr>
+	<tr><td class="code">&lt;ul type="<i>?</i>"&gt;</td>	<td>Unordered list bullet type: <code> disc, circle, square</code></td></tr>
+	<tr><td class="code">&lt;li value="??"&gt;</td>	<td>List Item Value (changes current and subsequent items)</td></tr>
+	<tr><td class="code">&lt;li type="??"&gt;</td>	<td>List Item Type (changes only current item)</td></tr>
+	<tr><td class="code">&lt;dl&gt; ... &lt;/dl&gt;</td><td>Definition List</td></tr>
+	<tr><td class="code">&lt;dt&gt; ... &lt;/dt&gt;</td><td>Term or phrase being defined</td></tr>
+	<tr><td class="code">&lt;dd&gt; ... &lt;/dd&gt;</td><td>Detailed Definition of term</td></tr>
+	</tbody></table><hr>
+	<table>
+	<tbody><tr><th class="head3" id="tables"><h2>Tables</h2></th>
+	<tr><td class="code">&lt;table&gt; ... &lt;/table&gt;</td><td>Define a Table</td></tr>
+	<tr><td class="attrhead">&lt;table&gt; Tag Attributes:</td><td>&nbsp;</td></tr>
+	<tr><td class="codeindt">border="?"</td>	<td>Thickness of outside border</td></tr>
+	<tr><td class="codeindt">bordercolor="#??????"</td> <td>Border <a href="http://www.simplehtmlguide.com/colours.php">Colour</a></td></tr>
+	<tr><td class="codeindt">cellspacing="?"</td>	<td>Space between cells (pixels)</td></tr>
+	<tr><td class="codeindt">cellpadding="?"</td>	<td>Space between cell wall and content</td></tr>
+	<tr><td class="codeindt">align="??"</td>	<td>Horizontal Alignment: <code>left, center, right</code> <a href="#superseded">(*)</a></td></tr>
+	<tr><td class="codeindt">bgcolor="#??????"</td> <td>Background Colour <a href="#superseded">(*)</a></td></tr>
+	<tr><td class="codeindt">width="??"</td>	<td>Table Width (pixels or %) <a href="#superseded">(*)</a></td></tr>
+	<tr><td class="codeindt">height="??"</td>	<td>Table Height (pixels or %) <a href="#superseded">(*)</a></td></tr>
+	<tr><td class="code">&lt;tr&gt; ... &lt;/tr&gt;</td><td>Table Row within table</td></tr>
+	<tr><td class="code">&lt;th&gt; ... &lt;/th&gt;</td><td>Header Cell within table row</td></tr>
+	<tr><td class="code">&lt;td&gt; ... &lt;/td&gt;</td><td>Table Cell within table row</td></tr>
+	<tr><td class="attrhead">&lt;td&gt; Tag Attributes:</td><td>&nbsp;</td></tr>
+	<tr><td class="codeindt">colspan="?"</td>	<td>Number of columns the cell spans across (cell merge)</td></tr>
+	<tr><td class="codeindt">rowspan="?"</td>	<td>Number of row a cell spans across (cell merge)</td></tr>
+	<tr><td class="codeindt">width="??"</td>	<td>Cell Width (pixels or %) <a href="#superseded">(*)</a></td></tr>
+	<tr><td class="codeindt">height="??"</td>	<td>Cell Height (pixels or %) <a href="#superseded">(*)</a></td></tr>
+	<tr><td class="codeindt">bgcolor="#??????"</td> <td>Background Colour <a href="#superseded">(*)</a></td></tr>
+	<tr><td class="codeindt">align="??"</td>	<td>Horizontal Alignment: <code>left, center, right</code> <a href="#superseded">(*)</a></td></tr>
+	<tr><td class="codeindt">valign="??"</td>	<td>Vertical Alignment: <code>top, middle, bottom</code> <a href="#superseded">(*)</a></td></tr>
+	<tr><td class="codeindt">nowrap</td>			<td>Force no line breaks in a particular cell</td></tr>
+	</tbody></table><hr>
+	<table>
+    <tbody><tr><th class="head3" id="frames"><h2>Frames</h2></th>
+	<tr><td class="code">&lt;frameset&gt; ... &lt;/frameset&gt;</td><td>Define the set of Frames</td></tr>
+	<tr><td class="attrhead">&lt;frameset&gt; Tag Attributes:</td><td>&nbsp;</td></tr>
+	<tr><td class="codeindt">rows="??,??, ..."</td>	<td>Define row sizes &amp; number of rows (size in pixels or %)</td></tr>
+	<tr><td class="codeindt">cols="??,??, ..."</td>	<td>Define column sizes &amp; number of columns (size in pixels or %)</td></tr>
+	<tr><td class="codeindt">noresize="noresize"</td>	<td>User cannot resize any frames in frameset</td></tr>
+	<tr><td class="code">&lt;frame&gt; ... &lt;/frame&gt;</td><td>Define a frame within the frameset</td></tr>
+	<tr><td class="attrhead">&lt;frame&gt; Tag Attributes:</td><td>&nbsp;</td></tr>
+	<tr><td class="codeindt">src="url"</td>	<td>Location of HTML File for a frame</td></tr>
+	<tr><td class="codeindt">name="***"</td>	<td>Unique name of frame window</td></tr>
+	<tr><td class="codeindt">marginwidth="?"</td>	<td>Horizontal margin spacing inside frame (pixels)</td></tr>
+	<tr><td class="codeindt">marginheight="?"</td>	<td>Vertical margin spacing inside frame (pixels)</td></tr>
+	<tr><td class="codeindt">noresize="noresize"</td>	<td>Declare all frameset sizes as fixed</td></tr>
+	<tr><td class="codeindt">scrolling="***"</td>	<td>Can the user scroll inside the frame: <code> yes, no, auto</code></td></tr>
+	<tr><td class="codeindt">frameborder="?"</td>	<td>Frame Border: (<code>1</code>=yes, <code>2</code>=no)</td></tr>
+	<tr><td class="codeindt">bordercolor="#??????"</td>	<td>Border Colour <a href="#superseded">(*)</a></td></tr>
+	<tr><td class="code">&lt;noframes&gt; ... &lt;/noframes&gt;</td><td>Unframed content (for browsers not supporting frames)</td></tr>
+    </tbody></table><hr>
+	<table>
+	<tbody><tr><th class="head3" id="forms"><h2>Forms</h2></th>
+	<tr><td class="code">&lt;form&gt; ... &lt;/form&gt;</td><td>Form input group decleration</td></tr>
+	<tr><td class="attrhead">&lt;form&gt; Tag Attributes:</td><td>&nbsp;</td></tr>
+	<tr><td class="codeindt">action="url"</td>	<td>URL of Form Script</td></tr>
+	<tr><td class="codeindt">method="***"</td>	<td>Method of Form: <code>get, post</code></td></tr>
+	<tr><td class="codeindt">enctype="***"</td>	<td>For File Upload: <code>enctype="multipart/form-data"</code></td></tr>
+	<tr><td class="code">&lt;input&gt; ... &lt;/input&gt;</td><td>Input field within form</td></tr>
+	<tr><td class="attrhead">&lt;input&gt; Tag Attributes:</td><td>&nbsp;</td></tr>
+	<tr><td class="codeindt">type="***"</td>	<td>Input Field Type: <code>text, password, checkbox, submit</code> etc.</td></tr>
+	<tr><td class="codeindt">name="***"</td>	<td>Form Field Name (for form processing script)</td></tr>
+	<tr><td class="codeindt">value="***"</td>	<td>Value of Input Field</td></tr>
+	<tr><td class="codeindt">size="***"</td>	<td>Field Size</td></tr>
+	<tr><td class="codeindt">maxlength="?"</td>	<td>Maximum Length of Input Field Data</td></tr>
+	<tr><td class="codeindt">checked</td>	<td>Mark selected field in radio button group or checkbox</td></tr>
+
+	<tr><td class="code">&lt;select&gt; ... &lt;/select&gt;</td><td>Select options from drop down list</td></tr>
+	<tr><td class="attrhead">&lt;select&gt; Tag Attributes:</td><td>&nbsp;</td></tr>
+	<tr><td class="codeindt">name="***"</td>	<td>Drop Down Combo-Box Name (for form processing script)</td></tr>
+	<tr><td class="codeindt">size="?"</td>	<td>Number of selectable options</td></tr>
+	<tr><td class="codeindt">multiple</td>	<td>Allow multiple selections</td></tr>
+
+	<tr><td class="code">&lt;option&gt; ... &lt;/option&gt;</td><td>Option (item) within drop down list</td></tr>
+	<tr><td class="attrhead">&lt;option&gt; Tag Attributes:</td><td>&nbsp;</td></tr>
+	<tr><td class="codeindt">value="***"</td>	<td>Option Value</td></tr>
+	<tr><td class="codeindt">selected</td>	<td>Set option as default selected option</td></tr>
+
+	<tr><td class="code">&lt;textarea&gt; ... &lt;/textarea&gt;</td><td>Large area for text input</td></tr>
+	<tr><td class="attrhead">&lt;textarea&gt; Tag Attributes:</td><td>&nbsp;</td></tr>
+	<tr><td class="codeindt">name="***"</td>	<td>Text Area Name (for form processing script)</td></tr>
+	<tr><td class="codeindt">rows="?"</td>	<td>Number of rows of text shown</td></tr>
+	<tr><td class="codeindt">cols="?"</td>	<td>Number of columns (characters per rows)</td></tr>
+	<tr><td class="codeindt">wrap="***"</td>	<td>Word Wrapping: <code>off, hard, soft</code></td></tr>
+	</tbody></table><hr>
+	<table>
+	<tbody><tr><th class="head3" id="specialchars"><h2>Special Characters</h2></th>
+	<tr><td class="code">&amp;lt;</td><td><b>&lt;</b> - Less-Than Symbol</td></tr>
+	<tr><td class="code">&amp;gt;</td><td><b>&gt;</b> - Greater-Than Symbol</td></tr>
+	<tr><td class="code">&amp;amp;</td><td><b>&amp;</b> - Ampersand, or 'and' sign</td></tr>
+	<tr><td class="code">&amp;quot;</td><td><b>"</b> - Quotation Mark</td></tr>
+	<tr><td class="code">&amp;copy;</td><td><b>©</b> - Copyright Symbol</td></tr>
+	<tr><td class="code">&amp;trade;</td><td><b>™</b> - Trademark Symbol</td></tr>
+	<tr><td class="code">&amp;nbsp;</td><td><b>&nbsp;</b> - A space (non-breaking space)</td></tr>
+	<tr><td class="code">&amp;#??;</td><td>ISO 8859-1 character - replace ?? with the <a href="http://www.simplehtmlguide.com/isocodes.php">iso code</a></td></tr>
+	</tbody></table>
+	<table>
+	<tbody><tr><th class="head3" id="misc_meta"><h2>Miscellaneous Tags</h2></th>
+	<tr><td class="code">&lt;!-- ... --&gt;</td><td>Comment within HTML source code</td></tr>
+	<tr><td class="code">&lt;!DOCTYPE html ... &gt;</td><td>Document Type Definition (<a href="http://en.wikipedia.org/wiki/Doctype">wiki</a>)</td></tr>
+	<tr><td class="code">&lt;meta&gt; ... &lt;/meta&gt;</td><td>META information tag</td></tr>
+	<tr><td class="attrhead">&lt;meta&gt; Tag Attributes:</td><td>&nbsp;</td></tr>
+	<tr><td class="codeindt">name="***"</td><td>Meta name: <code>description, keywords, author</code></td></tr>
+	<tr><td class="codeindt">http-equiv="***"</td><td>HTTP Equivalent Info: <code>title, etc.</code></td></tr>
+	<tr><td class="codeindt">content="***"</td><td>Information content</td></tr>
+
+	<tr><td class="code">&lt;link&gt;</td><td>LINK content relationship tag</td></tr>
+	<tr><td class="attrhead">&lt;link&gt; Tag Attributes:</td><td>&nbsp;</td></tr>
+	<tr><td class="codeindt">rel="***"</td><td>Type of forward relationship</td></tr>
+	<tr><td class="codeindt">http="<i>url</i>"</td><td>Location (URL) of object or file being linked</td></tr>
+	<tr><td class="codeindt">type="***"</td><td>Type of object or file, eg: <code>text/css</code></td></tr>
+	<tr><td class="codeindt">title="***"</td><td>Link title (optional)</td></tr>
+	</tbody></table><hr>
+	<table>
+	<tbody><tr><th class="head3" id="bodybg"><h2>Body Background &amp; Colours</h2></th>
+	<tr><td class="attrhead">&lt;body&gt; Tag Attributes:</td><td>&nbsp;</td></tr>
+	<tr><td class="codeindt">background="<i>url</i>"</td><td>Background Image <a href="#superseded">(*)</a></td></tr>
+	<tr><td class="codeindt">bgcolor="#??????" 	</td><td>Background <a href="http://www.simplehtmlguide.com/colours.php">Colour</a> <a href="#superseded">(*)</a></td></tr>
+	<tr><td class="codeindt">text="#??????" 	</td><td>Document Text Colour <a href="#superseded">(*)</a></td></tr>
+	<tr><td class="codeindt">link="#??????" 	</td><td>Link Colour <a href="#superseded">(*)</a></td></tr>
+	<tr><td class="codeindt">vlink="#??????" 	</td><td>Visited Link Colour <a href="#superseded">(*)</a></td></tr>
+	<tr><td class="codeindt">alink="#??????" 	</td><td>Active Link Colour <a href="#superseded">(*)</a></td></tr>
+	<tr><td class="codeindt">bgproperties="fixed" 	</td><td>Background Properties - "Fixed" = non-scrolling watermark <a href="#superseded">(*)</a></td></tr>
+	<tr><td class="codeindt">leftmargin="?" 	</td><td>Side Margin Size in Pixels (Internet Explorer) <a href="#superseded">(*)</a></td></tr>
+	<tr><td class="codeindt">topmargin="?" 	</td><td>Top Margin Size in Pixels (Internet Explorer) <a href="#superseded">(*)</a></td></tr>
+	</tbody></table><hr>
+	<div class="dash"><h3 id="superseded">(*) Important Note: </h3>
+		<p>Tags marked with (*) should still work, but have been superseded by<br><a href="http://www.simplehtmlguide.com/whatiscss.php">Cascading Style Sheets (CSS)</a>, which is now the recommended way to change the font, colour,<br>spacing, border or alignment of HTML elements.</p></div>
+						</ul>
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </section>
+    <!-- Blog Area -->
+
+    <!-- start footer Area -->
+	<footer class="footer-area section-gap">
+		<div class="container box_1170">			
+			<div class="row footer-bottom d-flex justify-content-between align-items-center">
+				<p class="col-lg-12 footer-text text-center"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		</div>
+	</footer>
+	<!-- End footer Area -->
+
+    <!--script src="../../../js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="../../../js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+    <script src="../../../js/easing.min.js"></script>
+    <script src="../../../js/hoverIntent.js"></script>
+    <script src="../../../js/superfish.min.js"></script>
+    <script src="../../../js/jquery.ajaxchimp.min.js"></script>
+    <script src="../../../js/jquery.magnific-popup.min.js"></script>
+    <script src="../../../js/owl.carousel.min.js"></script>
+    <script src="../../../js/jquery.nice-select.min.js"></script>
+    <script src="../../../js/waypoints.min.js"></script>
+    <script src="../../../js/mail-script.js"></script-->
+    <!--script src="../../../js/main.js"></script-->
+</body>
+
+</html>
