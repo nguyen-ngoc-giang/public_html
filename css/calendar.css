@@ -73,7 +73,7 @@ main {
 }
 
 .calendar__day__cell {
-  font-size: 1rem;
+  font-size: 0.8rem;
   position: relative;
 }
 
