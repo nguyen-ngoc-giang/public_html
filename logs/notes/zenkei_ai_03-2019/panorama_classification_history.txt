@@ -1,0 +1,40 @@
+89.1 % - VGG16 の fine tuning (6/15/2017)
+85.1 % - VGG16 の fine tuning (5/18/2017)
+82.1 % - AlexNet の fine tuning (5/17/2017)
+76.3 % - ModelCIFAR10_C3F2 (5/12/2017)
+72.0 % - ModelNineLayers (5/12/2017)
+
+5/12/2017
+	model: ModelNineLayers		acc-72.0%
+	model: ModelCIFAR10_C3F2	acc76.3%
+		
+5/17/2017
+	model: AlexNet finetuning	acc-82.1%
+	
+5/18/2017
+	model: VGG16 finetuning		acc-85.1%
+	
+6/15/2017
+	model: VGG16 finetuning		acc-89.1%
+
+3/5/2018
+	zenkei_ai.data_generator	all images are resized and saved using joblib.dump		save time of preprocessing (in comparison with load and resize images for everytime training)
+	model: ResNet34		https://medium.com/@pierre_guillou/understand-how-works-resnet-without-talking-about-residual-64698f157e0c
+		freezed: acc-64%
+		unfreeze: acc-80%
+		differential lr: not effect much
+		final: acc-88%
+
+3/6/2018
+	model: DenseNet		https://towardsdatascience.com/understanding-and-visualizing-densenets-7f688092391a
+		freezed: acc-64%
+		unfreeze: acc-88.5%
+
+3/7/2018
+	image size		double image size: from 100x50 to 200x100	data generator 5 time slower
+		freezed: acc-75%
+		unfreeze: acc-90%
+	change last layer to CAM usable		1 dense layer -> 1 conv + 1 avg_max_pool
+		freezed: acc-86%
+		unfreeze: 93.5%
+		

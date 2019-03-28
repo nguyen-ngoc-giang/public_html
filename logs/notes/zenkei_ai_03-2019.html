@@ -3,7 +3,7 @@
 <!-- ********************************************************************************Remember to edit this****************************************************************** -->
 <script>
 	var create="03/26/2019"
-	var update="03/26/2019"
+	var update="03/28/2019"
 </script> 
 <head>
 	<!-- Mobile Specific Meta -->
@@ -76,7 +76,7 @@
             <div class="row d-flex align-items-center justify-content-center">
                 <div class="col-lg-8">
                     <div class="main_blog_details">
-                        <a href="zenkei_ai_03-2019/ZenkeiAI_03-2019.jpg"><img class="img-fluid" src="zenkei_ai_03-2019/ZenkeiAI_03-2019.jpg" alt=""></a>
+                        <a href="zenkei_ai_03-2019/ZenkeiAI_03-2019.jpg" target="_blank"><img class="img-fluid" src="zenkei_ai_03-2019/ZenkeiAI_03-2019.jpg" alt=""></a>
                         <h4><a href="http://192.168.3.201/~ichiki/diary/2019/201903.html#d26-randd-projects">Zenkei AI - March 2019</a></h4>
                         <div class="user_details">
                             <div class="float-left">
@@ -104,8 +104,55 @@
                             </div>
                         </div>
 						<ul>
-							<li><h2>2D Player</h2></li>
-							<object width="800" height="500" data="zenkei_ai_03-2019/2DPlayer.pdf"></object>
+							<li><h2>2D Player</h2>
+								<h3>Process</h3>
+								<object width="800" height="500" data="zenkei_ai_03-2019/2DPlayer.pdf"></object>
+								<h3>Input, Output, and Model</h3>
+								<p>Some text here ....................</p>
+								<h3><a href="http://192.168.3.201/~ichiki/diary/2018/LOCAL/20180314-auto-player/demo.html" target="_blank">Achievements</a></h3>
+								<ol>
+									<li> Precisely assign each panorama image to floor plan </li>
+									<li> Correctly determine facing direction of panorama image in floor plan map </li>
+									<li> Precisely predict room type of panorama images </li>
+									<li> Correctly put a camera thumbnail showing position and direction of taken panorama </li>
+									<li> Walk through for each spot </li>
+								</ol>
+								<h3><a href="http://192.168.3.201/~ichiki/diary/2018/LOCAL/20180309-randd/ichiki.html" target="_blank">Programming achievements</a></h3>
+								<ol>
+									<li> Panorama classification:
+										<ul>
+											<li> Input: 1 panorama image </li>
+											<li> Output: type of room (10 classes) </li>
+											<li> Model: DenseNet + 1 conv + 1 avg_max_pooling </li>
+											<li> Accuracy: 93.5% </li>
+										</ul>
+									</li>
+									<li> Auto player generator:
+										<ul>
+											<li> Input: 1 floor plan image, 1 panorama image </li>
+											<li> Output: (x, y), angle </li>
+											<li> Model: DenseNet + 1 conv + 1 avg_max_pooling </li>
+											<li> (x, y) accuracy: 92% </li>
+											<li> Angle accuracy: 60% </li>
+										</ul>
+									</li>
+								</ol>
+								<h3><a href="zenkei_ai_03-2019/panorama_classification_history.txt" target="_blank">Development history</a></h3>
+								<p><a href="https://jacobgil.github.io/deeplearning/class-activation-maps" target="_blank"> CAM (Classification Activation Map)</a></p>
+								<h3>Pitch 有る・無し</h3>
+								<p> Currently, don't use <b>pitch</b> angle, only use <b>yaw</b> angle.</br>
+								<a href="https://simple.wikipedia.org/wiki/Pitch,_yaw,_and_roll" target="_blank"> Pitch, Yaw, and Roll </a></p>
+								<h3>2 Walkthrough algorithm</h3>
+								<ol>
+									<li> Algorithm 1: </li>
+										<p> Some text here ..................... </p>
+									<li> Alogirhtm 2: </li>
+										<p> Some text here ..................... </p>
+								</ol>
+							</li>
+							<li><h2>3D Composor</h2>
+								
+							</li>
 						</ul>
                     </div>
                 </div>                

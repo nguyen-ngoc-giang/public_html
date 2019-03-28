@@ -970,7 +970,7 @@ h6 {
   width: 14px;
   height: 14px; }
 
-.unordered-list li {
+/*.unordered-list li {
   position: relative;
   padding-left: 30px;
   line-height: 1.82em !important; }
@@ -1015,7 +1015,7 @@ h6 {
   .ordered-list-roman li span {
     font-weight: 300;
     color: #777777; }
-
+*/
 .single-input {
   display: block;
   width: 100%;
