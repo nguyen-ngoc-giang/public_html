@@ -564,6 +564,10 @@ th {
   .container.box_1170 {
     max-width: 1170px; } }
 
+@media (min-width: 1200px) {
+  .container.box_1800 {
+    max-width: 1800px; } }
+
 .section-bg {
   background: #f9fafc; }
 
