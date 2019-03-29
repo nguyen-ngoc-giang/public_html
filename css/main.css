@@ -52,9 +52,9 @@ body {
 
 ol,
 ul {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
+	padding: 0em;
+	margin: 1.5em
+}
 
 select {
   display: block; }
@@ -144,6 +144,13 @@ h6,
 td,
 th {
   border-radius: 0px; }
+  
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
 
 /**
  * For modern browsers

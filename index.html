@@ -747,7 +747,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     
 		tbl.appendChild(tbdy);
 	
-		var path_to_folder = "logs/" + year.toString() + "/" + months[month-1] + "/";
+		var path_to_folder = "logs/" + year.toString() + "/" + months[month-1];
 	
 		var dt = new Date(month.toString()+"/1/"+year.toString());
 		var date = dt.getDate();
@@ -770,9 +770,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 				cell = i%7;
 				brief_key=year.toString()+parse_month_date(month)+parse_month_date(i_date);
 				if (brief_key in brief) {
-					tbl.rows[row].cells[cell].innerHTML = "<a href=\"" + path_to_folder + i_date.toString() + ".html\">" + brief[brief_key] + "<\a>";
+					tbl.rows[row].cells[cell].innerHTML = "<a href=\"" + path_to_folder + ".html#"+ parse_month_date(month) + i_date.toString() + year.toString() + "\">" + brief[brief_key] + "<\a>";
 				} else {
-					tbl.rows[row].cells[cell].innerHTML = "<a href=\"" + path_to_folder + i_date.toString() + ".html\">" + "" + "<\a>";
+					tbl.rows[row].cells[cell].innerHTML = "<a href=\"" + path_to_folder + ".html\">" + "" + "<\a>";
 				}
 				tbl.rows[row].cells[cell].setAttribute("the-date", i_date.toString());
 				if (year == n_year && (month-1) == n_month && i_date == n_date) {

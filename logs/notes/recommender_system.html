@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<!-- ********************************************************************************Remember to edit this****************************************************************** -->
+<script>
+	var create="03/29/2019"
+	var update="03/29/2019"
+</script> 
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="../../img/logo.png">
+	<!-- Author Meta -->
+	<meta name="author" content="nguyen">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title id="title"></title>
+	<script>Recommender System</script>
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Roboto:400,500" rel="stylesheet">
+	<!--
+			CSS
+			============================================= -->
+	<link rel="stylesheet" title="calendar" href="../../css/calendar.css">
+	<link rel="stylesheet" href="../../css/linearicons.css">
+	<link rel="stylesheet" href="../../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../css/bootstrap.css">
+	<link rel="stylesheet" href="../../css/magnific-popup.css">
+	<link rel="stylesheet" href="../../css/nice-select.css">
+	<link rel="stylesheet" href="../../css/animate.min.css">
+	<link rel="stylesheet" href="../../css/owl.carousel.css">
+	<link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+	<!-- Start header Area -->
+	<header id="header">
+		<div class="container box_1170 main-menu">
+			<div class="row align-items-center justify-content-between d-flex">
+				<div id="logo">
+					<a href="index.html"><img src="../../img/logo.png" alt="" title="" /></a>
+				</div>
+				<nav id="nav-menu-container">
+					<ul class="nav-menu">
+						<li><a href="#">Top</a></li>
+						<li class="menu-active"><a href="../../index.html">Home</a></li>
+						<li><a href="../notes.html">Notes</a></li>
+						<li><a href="../../contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<!-- End header Area -->
+
+    <!-- start banner Area -->
+    <section class="banner-area relative section-gap">
+        <div class="overlay overlay-bg"></div>
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="about-content col-lg-12">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End banner Area -->
+
+    <!-- Blog Area -->
+    <section class="blog_area section-gap single-post-area">
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="col-lg-8">
+                    <div class="main_blog_details">
+						<img class="img-fluid" src="recommender_system/top_img.jpeg" alt=""/>
+                        <h1>Recommender System</h1>
+                        <div class="user_details">
+                            <div class="float-left">
+                                <a>AI</a>
+								<a>Work</a>
+                            </div>
+                            <div class="float-right">
+                                <div class="media">
+                                    <div class="media-body">
+                                        <p id="create_date"></p>
+										<p id="update_date"></p>
+										<script>
+											var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+											var days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thuday", "Friday", "Saturday"];
+											var cd = new Date(create);
+											var ud = new Date(update);
+											document.getElementById("create_date").innerHTML="<b>Created: </b>"+days[cd.getDay()]+", "+months[cd.getMonth()]+" "+cd.getDate()+", "+cd.getFullYear();
+											document.getElementById("update_date").innerHTML="<b>Updated: </b>"+days[ud.getDay()]+", "+months[ud.getMonth()]+" "+ud.getDate()+", "+ud.getFullYear();
+										</script>										
+                                    </div>
+                                    <div class="d-flex">
+                                        <!--img src="../../img/blog/user-img.jpg" alt=""-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<ol>
+							<li> <h3> Introduction </h3>
+								<ul>
+									<li> <b>Definition</b>  
+										<p> A recommendation system is a computer program that helps a user discover products and content by predicting the user’s rating of each item and showing them the items that they would rate highly. </p>
+										<img class="center" width="600" height="400" src="recommender_system/content-based.jpg" alt="">
+									</li>
+									<li> <b>Benifit</b>  
+										<p> If you can predict the user’s rating for a product before the user even sees the product, that’s very powerful. That means you can show the user only the things they would like the best and not waste their time with products they won’t care about. </p>
+									</li>
+									<li> <b>Usage</b> 
+										<ol>
+											<li> Ranking products by how much a user would like them. </li>
+											<li> How similar different products are to each other.<br> 
+												&#x27B1 Similar products might appeal to the same users (especially useful in cases where we don’t know much about a particular user yet -> we can recommend similar products).<br>
+												&#x27B1 Figure out if two different users are similar to each other if they have similar preferences products.
+											</li>
+										</ol>
+										<img class="center" width="600" height="400" src="recommender_system/recommender_function.jpg" alt="">
+									</li>
+									<li> <b>Filtering methodology</b>
+										<ol>
+											<li><b><i>Content-Based Recommender Systems:</i></b> they recommend based on product attributes
+												<p>They use the knowledge of each product to recommend new products. They try to recommend products that have similar attributes to a product that the user already liked.<br>
+												<b>Disadvantage:</b> Excessive specialization (not able to recommend items outside interested categories).
+												</p>
+											</li>
+											<li><b><i>Collaborative Filtering Recommender Systems:</i></b> they recommend based on similar users
+												<p>They make recommendations only based on how users rated products in the past, not based on anything about the products themselves.<br>
+												<b>Advantage:</b> Don't need to know about products, only need user interaction data<br>
+												<b>Disadvantage:</b>
+													<ul>
+														<li>Cold start (need to collect enough data: user-item interaction)</li>
+														<li>Difficult to recommend products to brand new user</li>
+														<li>Tends to favor products with lots of reviews over products with few or very less reviews -> it hard for users to discover new releases</li>
+													</ul>
+												<b>2 types:</b>
+													<ol>
+														<li> <i>Memory-based:</i> 2 approaches
+															<ul>
+																<li> <u>1st approach</u>: Identifies clusters of users and utilizes the interactions of one specific user to predict the interactions of other similar users.</li>
+																<li> <u>2nd approach</u>: Identifies clusters of items that have been rated by user A and utilizes them to predict the interaction of user A with a different but similar item B.</li>
+															</ul>
+														</li>
+														<li> <i>Model-based:</i>
+															<p> Based on machine learning and data mining techniques. Goal is to train a model to be able to make prediction of interactions.</p>
+														</li>
+													</ol>
+												</p>
+										</ol>
+									</li>
+									<li><b>Prerequisties</b>
+										<q><i>(If metadata is all you have available, you can start with content-based approaches. If you have a large number of user interactions, you can experiment with more powerful collaborative filtering)</i></q>
+										<ul>
+											<li>You should define the interactions with respect to your system so that data can be extracted.</li>
+											<li>The interactions can be defined as explicit or implicit.
+												<ul>
+													<li><b>Explicit</b> is characterized by situations such as when the user shows either positive or negative interest in an item, such as ranking or leaving a review.</li>
+													<li><b>Implicit</b> is when the user’s interest is derived from their actions, like searching for or buying an item.</li>
+												</ul>
+											</li>
+											<li>The larger the number of interactions per user and item, the better the final results will be.</li>
+											<li>Typically, there are very popular items that users interact with a lot and others that they don’t, which comprise what is known as the Long Tail. Recommender systems usually work pretty well on popular items, although that’s probably not very interesting to users as they most likely already know about them. The items in the Long Tail are the most interesting ones, because they may not be considered by the user at all if they aren’t recommended.
+												<img src="recommender_system/long-tail.png">
+											</li>
+										</ul>
+									</li>
+									<li><b>Evaluate a recommender system</b>
+										<ul>
+											<li><b><i>Online methods:</i></b>
+												<ul>
+													<li><u>A/B testing</u>: user reactions are measured given the recommendations made.</li>
+													<li>Hard to implement since the only way to run the experiments is by interacting with the system that is already in production.</li>
+												</ul>
+											</li>
+											<li><b><i>Offline methods:</b></i>
+												<ul>
+													<li>Ideal for experimental stages</li>
+													<li>The data is split into training and validation datasets</li>
+													<li><u>Metrics</u>:
+														<ul>
+															<li><b>Recall:</b></li>
+															<li><b>Precesion:</b></li>
+															<li><b>RMSE </b> (Root Mean Squared Error)</li>
+															<li><b>MRR </b> (Mean Reciprocal Rank)</li>
+															<li><b>MAP at k </b>(Mean Average Precision at cutoff k)</li>
+															<li><b>NDCG </b>(Normalized Discounted Cumulative Gain)</li>
+														</ul>
+													</li>													
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li> <h3> Item2Vec </h3>
+								<ul>
+									<li><a href="https://arxiv.org/abs/1603.04259" target="_blank">Journal Paper</a></li>
+									<li>Implementation: (<b>NOT CHECK YET!</b>) <br><a href="https://github.com/ctjoy/item2vec" target="_blank">ctjoy/item2vec</a><br> <a href="https://github.com/JayveeHe/MusicTaster" target="_blank">JayveeHe/MusicTaster</a><br> <a href="https://github.com/lujiaying/MovieTaster-Open" target="_blank">lujiaying/MovieTaster-Open</a></li>
+									<li><a href="https://medium.com/explore-artificial-intelligence/word2vec-a-baby-step-in-deep-learning-but-a-giant-leap-towards-natural-language-processing-40fe4e8602ba" target="_blank">Word2Vec</a></li>
+								</ul>
+							</li>
+							<li> <h2><a href="https://www.coursera.org/specializations/recommender-systems" target="_blank"> Recommender Systems Specialization Course - University of Minnesota (Coursera) </a></h2> 
+								<ul>									
+									<li> <h3><i>(.....Learning.....)</i><u>Course 1</u>: Introduction to Recommender Systems: Non-Personalized and Content-Based</h3> 
+										<ul>
+											<li> <a href="https://www.coursera.org/learn/recommender-systems-introduction?specialization=recommender-systems" target="_blank">Course page</a> </li>
+											<li> <a href="" target="_blank">Notes</a> </li>
+										</ul>
+									</li>
+									<li> <h3><u>Course 2</u>: Nearest Neighbor Collaborative Filtering</h3> 
+										<ul>
+											<li> <a href="https://www.coursera.org/learn/collaborative-filtering?specialization=recommender-systems" target="_blank">Course page</a> </li>
+											<li> <a href="" target="_blank">Notes</a> </li>
+										</ul>
+									</li>
+									<li> <h3><u>Course 3</u>: Recommender Systems: Evaluation and Metrics</h3> 
+										<ul>
+											<li> <a href="https://www.coursera.org/learn/recommender-metrics?specialization=recommender-systems" target="_blank">Course page</a> </li>
+											<li> <a href="" target="_blank">Notes</a> </li>
+										</ul>
+									</li>
+									<li> <h3><u>Course 4</u>: Matrix Factorization and Advanced Techniques</h3> 
+										<ul>
+											<li> <a href="https://www.coursera.org/learn/matrix-factorization?specialization=recommender-systems" target="_blank">Course page</a> </li>
+											<li> <a href="" target="_blank">Notes</a> </li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li> <h2>Reading materials</h2>
+								<ul>
+									<li> <h3>Books (<i>to read</i>)</h3>
+										<ol>
+											<li> <i>(...reading...)</i><a href="../../books/recommender_system/Recommender_System_An_Introduction.pdf" target="_blank"> Recommender System - An Introduction (2011) </a> By: Dietmar Jannach, Markus Zanker, Alexander Felferig, and Gerhard Friedrich</li>
+											<li> <a href="../../books/recommender_system/Recommender_Systems_the_Textbook.pdf" target="_blank"> Recommender System - the Textbook (2016) </a> By: Charu C. Aggarwal </li>
+											<li> <a href="../../books/recommender_system/Mining_of_Massive_Datasets.pdf" target="_blank"> Mining of Massive Datasets (2014) </a> By: Jure Leskovec, Anand Rajaraman, and Jeffrey D. Ullman </li>
+											<li> <a href="../../books/recommender_system/Recommender_Systems_Handbook.pdf" target="_blank"> Recommender Systems Handbook (2011) </a> By: Francesco Ricci, Lior Rokach, Bracha Shapira, and Paul B. Kantor </li>
+										</ol>
+									</li>
+								</ul>
+							</li>
+						</ol>
+  
+                    </div>
+                </div>                
+            </div>
+        </div>
+    </section>
+    <!-- Blog Area -->
+
+    <!-- start footer Area -->
+	<footer class="footer-area section-gap">
+		<div class="container box_1170">			
+			<div class="row footer-bottom d-flex justify-content-between align-items-center">
+				<p class="col-lg-12 footer-text text-center"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		</div>
+	</footer>
+	<!-- End footer Area -->
+
+    <!--script src="../../../js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="../../../js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+    <script src="../../../js/easing.min.js"></script>
+    <script src="../../../js/hoverIntent.js"></script>
+    <script src="../../../js/superfish.min.js"></script>
+    <script src="../../../js/jquery.ajaxchimp.min.js"></script>
+    <script src="../../../js/jquery.magnific-popup.min.js"></script>
+    <script src="../../../js/owl.carousel.min.js"></script>
+    <script src="../../../js/jquery.nice-select.min.js"></script>
+    <script src="../../../js/waypoints.min.js"></script>
+    <script src="../../../js/mail-script.js"></script-->
+    <!--script src="../../../js/main.js"></script-->
+</body>
+
+</html>
