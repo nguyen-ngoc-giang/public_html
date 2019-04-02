@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<!-- ********************************************************************************Remember to edit this****************************************************************** -->
+<script>
+	var create="04/02/2019"
+	var update="04/02/2019"
+</script> 
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="../../img/logo.png">
+	<!-- Author Meta -->
+	<meta name="author" content="nguyen">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title id="title">PROJECT 1 - Auto Player Generator</title>
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Roboto:400,500" rel="stylesheet">
+	<!--
+			CSS
+			============================================= -->
+	<link rel="stylesheet" title="calendar" href="../../css/calendar.css">
+	<link rel="stylesheet" href="../../css/linearicons.css">
+	<link rel="stylesheet" href="../../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../css/bootstrap.css">
+	<link rel="stylesheet" href="../../css/magnific-popup.css">
+	<link rel="stylesheet" href="../../css/nice-select.css">
+	<link rel="stylesheet" href="../../css/animate.min.css">
+	<link rel="stylesheet" href="../../css/owl.carousel.css">
+	<link rel="stylesheet" href="../../css/main.css">
+	<link rel="stylesheet" href="../../css/two-columns.css">
+	<link rel="stylesheet" href="../../css/treestyles.css" type="text/css" />
+	<script type="text/javascript" src="../../js/marktree.js"> </script>
+	<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+</head>
+
+<body>
+	<!-- Start header Area -->
+	<header id="header">
+		<div class="container box_1800 main-menu">
+			<div class="row align-items-center justify-content-between d-flex">
+				<div id="logo">
+					<a href="index.html"><img src="../../img/logo.png" alt="" title="" /></a>
+				</div>
+				<nav id="nav-menu-container">
+					<ul class="nav-menu">
+						<li><a href="#">Top</a></li>
+						<li class="menu-active"><a href="../../index.html">Home</a></li>
+						<li><a href="../notes.html">Notes</a></li>
+						<li><a href="../projects.html">Projects</a></li>
+						<li><a href="../../contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<!-- End header Area -->
+
+    <!-- start banner Area -->
+    <section class="banner-area relative section-gap">
+        <div class="overlay overlay-bg"></div>
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="about-content col-lg-12">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End banner Area -->
+
+    <!-- Blog Area -->
+    <section class="blog_area section-gap single-post-area">
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="col-lg-8">
+                    <div class="main_blog_details">
+                        
+                        <h1>PROJECT 1 - Auto Player Generator</h1>
+                        <div class="user_details">
+                            <div class="float-left">
+                                <a>AI</a>
+								<a>Python</a>
+								<a>Pytorch</a>
+                                <a>Project</a>
+                            </div>
+                            <div class="float-right">
+                                <div class="media">
+                                    <div class="media-body">
+                                        <p id="create_date"></p>
+										<p id="update_date"></p>
+										<script>
+											var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+											var days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thuday", "Friday", "Saturday"];
+											var cd = new Date(create);
+											var ud = new Date(update);
+											document.getElementById("create_date").innerHTML="<b>Created: </b>"+days[cd.getDay()]+", "+months[cd.getMonth()]+" "+cd.getDate()+", "+cd.getFullYear();
+											document.getElementById("update_date").innerHTML="<b>Updated: </b>"+days[ud.getDay()]+", "+months[ud.getMonth()]+" "+ud.getDate()+", "+ud.getFullYear();
+										</script>										
+                                    </div>
+                                    <div class="d-flex">
+                                        <!--img src="../../img/blog/user-img.jpg" alt=""-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<div>
+							<ol>
+								<li>Work log:
+									<ul>
+										<li><a href="#04022019">Day 1: (04/02/2019) Study the Model</a></li>
+										<li><a href="#04032019">Day 2: (04/03/2019)</a></li>
+									</ul>
+								</li>
+								<li id="04022019">Day 1: (04/02/2019) Study the Model
+									<ul>
+								<li><h2>Dataset:</h2>
+									<ul>
+										<li><h3>Input:</h3>
+											<ul>
+												<li>Image:
+													<ul>
+														<li>FP: 128 x 128 x 3 (floorplan)</li>
+														<li>PN: 128 x 64 x 3 (panorama)</li>
+													</ul>
+												</li>
+												<li class="fade-text">Datasets0:
+													<ul>
+														<li>N_SAMPLE = 25000</li>
+														<li>N_SAMPLE_TEST = 1588</li>
+													</ul>
+												</li>
+												<li class="fade-text">Datasets1:
+													<ul>
+														<li>N_SAMPLE = 25016</li>
+														<li>N_SAMPLE_TEST = 1572</li>
+													</ul>
+												</li>
+												<li class="fade-text">Datasets2:
+													<ul>
+														<li>N_SAMPLE = 16908</li>
+														<li>N_SAMPLE_TEST = 896</li>
+													</ul>
+												</li>
+												<li >Datasets3 and Datasets4:
+													<ul>
+														<li>N_SAMPLE = 12792</li>
+														<li>N_SAMPLE_TEST = 692</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li><h3>Output:</h3></li>
+											<ul>
+												<li>Postion:
+													<ul>
+														<li>x</li>
+														<li>y</li>
+													</ul>
+												</li>
+												<li>Angle:
+													<ul>
+														<li>N_ANGLE = 16</li>
+														<li lang="latex">
+															d_{angle} = \frac{2.0 * math.pi}{N\_ANGLE}
+														</li>
+													</ul>
+												</li>
+											</ul>
+										<li><h3>Data generator:</h3>
+											<ul>
+												<li>
+													dump_size = 64
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li><hr>
+								<li><h2>Functions:</h2>
+									<div class="basetop"><a onclick="expandAll(document.getElementById('base'))" href="#">Expand</a> -
+										<a onclick="collapseAll(document.getElementById('base'))" href="#">Collapse</a></div><div class="basetext" id="base"><ul>
+											<li class="col" id="FMID_1836382507FM"><div class="nodecontent">Zenkei Auto Player</div>
+												<ul class="subexp">
+											<li class="col" id="FMID_206433088FM"><div class="nodecontent">Model</div>
+												<ul class="subexp">
+											<li class="exp" id="FMID_1536803317FM"><div class="nodecontent">ResidualBlock(nn.Module)</div>
+												<ul class="sub">
+											<li class="col" id="FMID_1376673103FM"><div class="nodecontent">input</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_957522834FM"><div class="nodecontent">in_channels</div></li>
+											<li class="basic" id="FMID_561380486FM"><div class="nodecontent">out_channels</div></li>
+											<li class="basic" id="FMID_1674486745FM"><div class="nodecontent">stride = 1</div></li>
+											<li class="basic" id="FMID_599748174FM"><div class="nodecontent">p = 0.0</div></li></ul></li>
+											<li class="col" id="FMID_740796455FM"><div class="nodecontent">forward</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_123585595FM"><div class="nodecontent">residual</div></li>
+											<li class="col" id="FMID_1153774760FM"><div class="nodecontent">bn1</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_1274120731FM"><div class="nodecontent">nn.BatchNorm2d(in_channels)</div></li></ul></li>
+											<li class="col" id="FMID_680521722FM"><div class="nodecontent">relu1</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_650428384FM"><div class="nodecontent">F.relu(bn1)</div></li></ul></li>
+											<li class="col" id="FMID_144674790FM"><div class="nodecontent">conv1</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_1556163888FM"><div class="nodecontent">nn.Conv2d(in_channels, out_channels, kernel_size=3, stride=stride, padding=1, bias=False)</div></li></ul></li>
+											<li class="col" id="FMID_1476694646FM"><div class="nodecontent">bn2</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_85710374FM"><div class="nodecontent">nn.BatchNorm2d(out_channels)</div></li></ul></li>
+											<li class="col" id="FMID_194364980FM"><div class="nodecontent">relu2</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_1081718188FM"><div class="nodecontent">F.relu(bn2)</div></li></ul></li>
+											<li class="col" id="FMID_768399374FM"><div class="nodecontent">dropout</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_646054232FM"><div class="nodecontent">F.dropout(relu, p=self.drop_rate, training=self.training) </div></li></ul></li>
+											<li class="col" id="FMID_1846113659FM"><div class="nodecontent">conv2</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_245057004FM"><div class="nodecontent">nn.Conv2d(out_channels, out_channels, kernel_size=3, stride=stride, padding=1, bias=False)</div></li></ul></li></ul></li>
+											<li class="col" id="FMID_51769075FM"><div class="nodecontent">return</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_1569030488FM"><div class="nodecontent">residual + conv2</div></li></ul></li></ul></li>
+											<li class="exp" id="FMID_606979278FM"><div class="nodecontent">_ConvLayer(nn.Module)</div>
+												<ul class="sub">
+											<li class="col" id="FMID_1732134190FM"><div class="nodecontent">input</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_709098643FM"><div class="nodecontent">ch_in</div></li>
+											<li class="basic" id="FMID_1843426615FM"><div class="nodecontent">ch_out</div></li>
+											<li class="basic" id="FMID_1088491729FM"><div class="nodecontent">stride = 2</div></li>
+											<li class="basic" id="FMID_433576769FM"><div class="nodecontent">p = 0.0</div></li></ul></li>
+											<li class="col" id="FMID_1075219554FM"><div class="nodecontent">forward</div>
+												<ul class="subexp">
+											<li class="col" id="FMID_681402226FM"><div class="nodecontent">conv</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_369027647FM"><div class="nodecontent">nn.Conv2d(ch_in, ch_out, kernel_size=3, padding=1, stride=1, bias=False)</div></li></ul></li>
+											<li class="col" id="FMID_229965723FM"><div class="nodecontent">bn</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_1376493780FM"><div class="nodecontent">nn.BatchNorm2d(ch_out)</div></li></ul></li>
+											<li class="col" id="FMID_506825853FM"><div class="nodecontent">relu</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_448041714FM"><div class="nodecontent">F.relu(bn)</div></li></ul></li>
+											<li class="col" id="FMID_373093694FM"><div class="nodecontent">maxpool</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_1257758408FM"><div class="nodecontent">nn.MaxPool2d(kernel_size=3, padding=1, stride=stride)</div></li></ul></li>
+											<li class="col" id="FMID_847711243FM"><div class="nodecontent">dropout</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_1295806486FM"><div class="nodecontent">F.dropout(maxpool, p=self.drop_rate, training=self.training)</div></li></ul></li></ul></li>
+											<li class="col" id="FMID_1081358518FM"><div class="nodecontent">return</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_1242556063FM"><div class="nodecontent">dropout</div></li></ul></li></ul></li>
+											<li class="col" id="FMID_233532509FM"><div class="nodecontent">PlayerNet(nn.Module)</div>
+												<ul class="subexp">
+											<li class="col" id="FMID_1251120589FM"><div class="nodecontent">input</div>
+												<ul class="subexp">
+											<li class="col" id="FMID_1688843262FM"><div class="nodecontent">ch_fp = 0</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_286259223FM"><div class="nodecontent">number of channels to embed for floorplan images</div></li>
+											<li class="basic" id="FMID_1456983858FM"><div class="nodecontent">default '0' --- no embedding</div></li></ul></li>
+											<li class="col" id="FMID_1225970769FM"><div class="nodecontent">ch_pn = 0</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_1927136795FM"><div class="nodecontent">number of channels to embed for panorama images</div></li>
+											<li class="basic" id="FMID_99460085FM"><div class="nodecontent">default '0' --- no embedding</div></li></ul></li>
+											<li class="col" id="FMID_1481951792FM"><div class="nodecontent">n_xy = 4</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_1349577896FM"><div class="nodecontent">number of ResNet units in each ResNet part for (x, y)</div></li></ul></li>
+											<li class="col" id="FMID_28981505FM"><div class="nodecontent">n_angle = 4</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_369037035FM"><div class="nodecontent">number of RetNet units in each ResNet part for (angle)</div></li></ul></li>
+											<li class="col" id="FMID_1261545393FM"><div class="nodecontent">dropout_xy = 0.1</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_145220566FM"><div class="nodecontent">dropout probability for (x, y)</div></li></ul></li>
+											<li class="col" id="FMID_1111333342FM"><div class="nodecontent">dropout_angle = 0.1</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_260299069FM"><div class="nodecontent">dropout probability for (angle)</div></li></ul></li></ul></li>
+											<li class="col" id="FMID_1538970039FM"><div class="nodecontent">forward</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_1975294859FM"><div class="nodecontent">fp</div></li>
+											<li class="basic" id="FMID_1248111178FM"><div class="nodecontent">pn</div></li>
+											<li class="basic" id="FMID_1902538080FM"><div class="nodecontent">cat</div></li></ul></li>
+											<li class="col" id="FMID_358516867FM"><div class="nodecontent">return</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_368720377FM"><div class="nodecontent">xy_fc, angle_view</div></li></ul></li></ul></li>
+											<li class="col" id="FMID_227411409FM"><div class="nodecontent">Loss and Accuracy</div>
+												<ul class="subexp">
+											<li class="exp" id="FMID_1315277635FM"><div class="nodecontent">helper_functions</div>
+												<ul class="sub">
+											<li class="col" id="FMID_1293185491FM"><div class="nodecontent">err_mean_distance_xy</div>
+												<ul class="subexp">
+											<li class="col" id="FMID_1522145576FM"><div class="nodecontent">input</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_1286824975FM"><div class="nodecontent">y_pred</div></li>
+											<li class="basic" id="FMID_127784924FM"><div class="nodecontent">y_true</div></li></ul></li>
+											<li class="col" id="FMID_32284598FM"><div class="nodecontent">return</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_1443986113FM"><div class="nodecontent">???</div></li></ul></li>
+											<li class="basic" id="FMID_308181910FM"><div class="nodecontent">usage</div></li></ul></li>
+											<li class="col" id="FMID_458598866FM"><div class="nodecontent">sparse_crossentropy_with_logits</div>
+												<ul class="subexp">
+											<li class="col" id="FMID_179051512FM"><div class="nodecontent">input</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_153084574FM"><div class="nodecontent">labels</div></li>
+											<li class="basic" id="FMID_920194259FM"><div class="nodecontent">logits</div></li></ul></li>
+											<li class="col" id="FMID_1381389038FM"><div class="nodecontent">return</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_1091082347FM"><div class="nodecontent">???</div></li></ul></li>
+											<li class="basic" id="FMID_1696074620FM"><div class="nodecontent">usage</div></li></ul></li>
+											<li class="col" id="FMID_1401443271FM"><div class="nodecontent">acc_xy</div>
+												<ul class="subexp">
+											<li class="col" id="FMID_1780448357FM"><div class="nodecontent">input</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_1874618233FM"><div class="nodecontent">y_pred</div></li>
+											<li class="basic" id="FMID_753778332FM"><div class="nodecontent">y_true</div></li>
+											<li class="basic" id="FMID_170114829FM"><div class="nodecontent">alpha = 0.1</div></li></ul></li>
+											<li class="col" id="FMID_39745195FM"><div class="nodecontent">return</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_866152601FM"><div class="nodecontent">???</div></li></ul></li>
+											<li class="basic" id="FMID_1348852233FM"><div class="nodecontent">usage</div></li></ul></li></ul></li>
+											<li class="exp" id="FMID_817425672FM"><div class="nodecontent">acc</div>
+												<ul class="sub">
+											<li class="col" id="FMID_1959816373FM"><div class="nodecontent">my_acc_xy</div>
+												<ul class="subexp">
+											<li class="col" id="FMID_349402535FM"><div class="nodecontent">input</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_273691085FM"><div class="nodecontent">outputs</div></li>
+											<li class="basic" id="FMID_1795316666FM"><div class="nodecontent">labels</div></li></ul></li>
+											<li class="basic" id="FMID_1801178289FM"><div class="nodecontent">return</div></li>
+											<li class="basic" id="FMID_1896281145FM"><div class="nodecontent">usage</div></li></ul></li>
+											<li class="col" id="FMID_779770086FM"><div class="nodecontent">my_acc_angle</div>
+												<ul class="subexp">
+											<li class="col" id="FMID_1885761520FM"><div class="nodecontent">input</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_1647084823FM"><div class="nodecontent">outputs</div></li>
+											<li class="basic" id="FMID_777990563FM"><div class="nodecontent">labels</div></li></ul></li>
+											<li class="basic" id="FMID_1603000414FM"><div class="nodecontent">return</div></li>
+											<li class="basic" id="FMID_941639167FM"><div class="nodecontent">usage</div></li></ul></li></ul></li>
+											<li class="exp" id="FMID_30492325FM"><div class="nodecontent">loss</div>
+												<ul class="sub">
+											<li class="col" id="FMID_335250722FM"><div class="nodecontent">my_loss_xy</div>
+												<ul class="subexp">
+											<li class="col" id="FMID_1659127599FM"><div class="nodecontent">input</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_432894026FM"><div class="nodecontent">outputs</div></li>
+											<li class="basic" id="FMID_253335845FM"><div class="nodecontent">labels</div></li></ul></li>
+											<li class="basic" id="FMID_161486520FM"><div class="nodecontent">return</div></li>
+											<li class="basic" id="FMID_1138256622FM"><div class="nodecontent">usage</div></li></ul></li>
+											<li class="col" id="FMID_517406934FM"><div class="nodecontent">my_loss_angle</div>
+												<ul class="subexp">
+											<li class="col" id="FMID_1415746708FM"><div class="nodecontent">input</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_1985602372FM"><div class="nodecontent">outputs</div></li>
+											<li class="basic" id="FMID_807950001FM"><div class="nodecontent">labels</div></li></ul></li>
+											<li class="basic" id="FMID_1329388162FM"><div class="nodecontent">return</div></li>
+											<li class="basic" id="FMID_1300159293FM"><div class="nodecontent">usage</div></li></ul></li>
+											<li class="col" id="FMID_1889699343FM"><div class="nodecontent">my_loss</div>
+												<ul class="subexp">
+											<li class="col" id="FMID_25449026FM"><div class="nodecontent">input</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_1408789730FM"><div class="nodecontent">outputs</div></li>
+											<li class="basic" id="FMID_125396456FM"><div class="nodecontent">labels</div></li></ul></li>
+											<li class="basic" id="FMID_1973791299FM"><div class="nodecontent">return</div></li>
+											<li class="basic" id="FMID_1390756410FM"><div class="nodecontent">usage</div></li></ul></li></ul></li></ul></li></ul></li>
+											<li class="col" id="FMID_1795576863FM"><div class="nodecontent">functions</div>
+												<ul class="subexp">
+											<li class="exp" id="FMID_1129423120FM"><div class="nodecontent">norm_angle</div>
+												<ul class="sub">
+											<li class="col" id="FMID_1524233432FM"><div class="nodecontent">input</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_1028995778FM"><div class="nodecontent">theta</div></li></ul></li>
+											<li class="basic" id="FMID_833741912FM"><div class="nodecontent">usage</div></li></ul></li>
+											<li class="exp" id="FMID_1153316649FM"><div class="nodecontent">rotate_pano</div>
+												<ul class="sub">
+											<li class="col" id="FMID_1351020391FM"><div class="nodecontent">input</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_676170580FM"><div class="nodecontent">pano</div></li>
+											<li class="basic" id="FMID_1044063029FM"><div class="nodecontent">dyaw</div></li></ul></li>
+											<li class="basic" id="FMID_1895385812FM"><div class="nodecontent">usage</div></li></ul></li>
+											<li class="exp" id="FMID_1414477727FM"><div class="nodecontent">distort_batch</div>
+												<ul class="sub">
+											<li class="col" id="FMID_1446621142FM"><div class="nodecontent">input</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_1197531992FM"><div class="nodecontent">xs</div></li>
+											<li class="basic" id="FMID_1786677478FM"><div class="nodecontent">ys</div></li>
+											<li class="basic" id="FMID_1417851335FM"><div class="nodecontent">dist_pn = True</div></li>
+											<li class="basic" id="FMID_667481992FM"><div class="nodecontent">dist_fp = True</div></li></ul></li>
+											<li class="basic" id="FMID_1533739160FM"><div class="nodecontent">usage</div></li></ul></li>
+											<li class="exp" id="FMID_1445759273FM"><div class="nodecontent">shuffle_batch</div>
+												<ul class="sub">
+											<li class="col" id="FMID_1663808990FM"><div class="nodecontent">input</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_835051389FM"><div class="nodecontent">xs</div></li>
+											<li class="basic" id="FMID_1991487454FM"><div class="nodecontent">ys</div></li>
+											<li class="basic" id="FMID_1555738425FM"><div class="nodecontent">idx</div></li></ul></li>
+											<li class="basic" id="FMID_1329480934FM"><div class="nodecontent">usage</div></li></ul></li>
+											<li class="exp" id="FMID_1982547327FM"><div class="nodecontent">xs_to_fp</div>
+												<ul class="sub">
+											<li class="col" id="FMID_1588403158FM"><div class="nodecontent">input</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_1986352218FM"><div class="nodecontent">xs</div></li>
+											<li class="basic" id="FMID_882392543FM"><div class="nodecontent">output_format = 'numpy'</div></li></ul></li>
+											<li class="basic" id="FMID_226387194FM"><div class="nodecontent">usage</div></li></ul></li>
+											<li class="exp" id="FMID_248868149FM"><div class="nodecontent">xs_to_pn</div>
+												<ul class="sub">
+											<li class="col" id="FMID_595325570FM"><div class="nodecontent">input</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_1468987892FM"><div class="nodecontent">xs</div></li>
+											<li class="basic" id="FMID_1434904828FM"><div class="nodecontent">output_format = 'numpy'</div></li></ul></li>
+											<li class="basic" id="FMID_1221423359FM"><div class="nodecontent">usage</div></li></ul></li>
+											<li class="exp" id="FMID_1037871780FM"><div class="nodecontent">ys_to_xy</div>
+												<ul class="sub">
+											<li class="col" id="FMID_1986687152FM"><div class="nodecontent">input</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_817346269FM"><div class="nodecontent">ys</div></li>
+											<li class="basic" id="FMID_1664707019FM"><div class="nodecontent">output_format = 'numpy'</div></li></ul></li>
+											<li class="basic" id="FMID_1493374474FM"><div class="nodecontent">usage</div></li></ul></li>
+											<li class="exp" id="FMID_984723886FM"><div class="nodecontent">ys_to_angle</div>
+												<ul class="sub">
+											<li class="col" id="FMID_1208423962FM"><div class="nodecontent">input</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_1282828110FM"><div class="nodecontent">ys</div></li>
+											<li class="basic" id="FMID_1662125634FM"><div class="nodecontent">output_format = 'numpy'</div></li></ul></li>
+											<li class="basic" id="FMID_69588016FM"><div class="nodecontent">usage</div></li></ul></li>
+											<li class="col" id="FMID_114974970FM"><div class="nodecontent">data_generator</div>
+												<ul class="subexp">
+											<li class="exp" id="FMID_279367182FM"><div class="nodecontent">input</div>
+												<ul class="sub">
+											<li class="basic" id="FMID_1725627575FM"><div class="nodecontent">batch_size</div></li>
+											<li class="basic" id="FMID_1690233004FM"><div class="nodecontent">dump_size</div></li>
+											<li class="basic" id="FMID_519641789FM"><div class="nodecontent">dump_bodyname</div></li>
+											<li class="basic" id="FMID_844345315FM"><div class="nodecontent">dump_list</div></li>
+											<li class="basic" id="FMID_1814132741FM"><div class="nodecontent">shuffle = False</div></li>
+											<li class="basic" id="FMID_591437809FM"><div class="nodecontent">dist_pn = False</div></li>
+											<li class="basic" id="FMID_938183479FM"><div class="nodecontent">dist_fp = False</div></li>
+											<li class="basic" id="FMID_1915804554FM"><div class="nodecontent">output_format = 'numpy'</div></li></ul></li>
+											<li class="col" id="FMID_204616541FM"><div class="nodecontent">return</div>
+												<ul class="subexp">
+											<li class="col" id="FMID_152486319FM"><div class="nodecontent">(xs_fp, xs_pn), (ys_xy, ys_angle)</div>
+												<ul class="subexp">
+											<li class="col" id="FMID_144723530FM"><div class="nodecontent">xs_fp: floorplan images</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_1404591348FM"><div class="nodecontent">'numpy' --- (-1, FP_HEIGHT, FP_WIDTH, 3)</div></li>
+											<li class="basic" id="FMID_373242012FM"><div class="nodecontent">'pytorch' --- (-1, 3, FP_HEIGHT, FP_WIDTH)</div></li></ul></li>
+											<li class="col" id="FMID_585162730FM"><div class="nodecontent">xs_pn: panorama images</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_888803931FM"><div class="nodecontent">'numpy' --- (-1, PN_HEIGHT, PN_WIDTH, 3)</div></li>
+											<li class="basic" id="FMID_1771572965FM"><div class="nodecontent">'pytorch' --- (-1, 3, PN_HEIGHT, PN_WIDTH)</div></li></ul></li>
+											<li class="col" id="FMID_132695556FM"><div class="nodecontent">ys_xy: position of each panorama on the floorplan (x, y)</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_1411327190FM"><div class="nodecontent">'numpy' --- (-1, 2)</div></li>
+											<li class="basic" id="FMID_973104681FM"><div class="nodecontent">'pytorch' --- (-1, 2)</div></li></ul></li>
+											<li class="col" id="FMID_738464501FM"><div class="nodecontent">ys_angle: discretized angle classes for each panorama</div>
+												<ul class="subexp">
+											<li class="basic" id="FMID_1932688980FM"><div class="nodecontent">'numpy' --- (-1, N_ANGLE)</div></li>
+											<li class="basic" id="FMID_1029619218FM"><div class="nodecontent">'pytorch' --- (-1, N_ANGLE)</div></li></ul></li></ul></li></ul></li>
+											<li class="basic" id="FMID_901324997FM"><div class="nodecontent">usage</div></li></ul></li></ul></li></ul></li>
+										</ul>
+									</div>
+								</li><hr>
+								<li><h2>Model:</h2>
+									<ul>
+										<li>Show model using <a href="https://tensorboardx.readthedocs.io/en/latest/index.html" target="_blank">TensorboardX</a>:
+											<ul>
+												<li>Prereqire: <a href="https://pytorch.org/" target="_blank">pytorch</a>, <a href="https://www.tensorflow.org/install/gpu" target="_blank">tensorflow</a></li>
+												<li><a href="https://github.com/lanpa/tensorboardX" target="_blank">Install</a> : <code>pip install tensorboardX</code></li>
+												<li>Create graph:<br>
+													<code>python zenkei_auto_player.py</code><br>
+													<p><i>zenkei_auto_player.py</i> is in this <a href="Project01-AutoPlayerGenerator/zenkei_auto_player.py" target="_blank">link</a></p>
+												</li>
+												<li>View graph:<br>
+													<code>tensorboard --logdir=runs --host localhost --port 8088</code><br>
+													<p>Then open browser and type <a href="localhost:8088" target="_blank">localhost:8088</a></p>
+												</li>
+											</ul>
+										</li>
+										<li>Model graph:
+											<img src="Project01-AutoPlayerGenerator/model.png"\>
+										</li>
+									</ul>
+								</li>
+									</ul>
+								</li>
+								<li id="04032019">Day 2: (04/03/2019) </li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>				
+    </section>
+    <!-- Blog Area -->
+
+    <!-- start footer Area -->
+	<footer class="footer-area section-gap">
+		<div class="container box_1170">			
+			<div class="row footer-bottom d-flex justify-content-between align-items-center">
+				<p class="col-lg-12 footer-text text-center"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		</div>
+	</footer>
+	<!-- End footer Area -->
+
+    <!--script src="../../../js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="../../../js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+    <script src="../../../js/easing.min.js"></script>
+    <script src="../../../js/hoverIntent.js"></script>
+    <script src="../../../js/superfish.min.js"></script>
+    <script src="../../../js/jquery.ajaxchimp.min.js"></script>
+    <script src="../../../js/jquery.magnific-popup.min.js"></script>
+    <script src="../../../js/owl.carousel.min.js"></script>
+    <script src="../../../js/jquery.nice-select.min.js"></script>
+    <script src="../../../js/waypoints.min.js"></script>
+    <script src="../../../js/mail-script.js"></script-->
+    <!--script src="../../../js/main.js"></script-->
+</body>
+
+</html>

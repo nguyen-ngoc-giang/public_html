@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
+<!-- ********************************************************************************Remember to edit this****************************************************************** -->
 <script>
-	var create="04/01/2019"
-	var update="04/01/2019"
-</script> 
+	var create="03/26/2019"
+	var update="03/29/2019"
+</script>  
 <head>
 	<!-- Mobile Specific Meta -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Favicon-->
-	<link rel="shortcut icon" href="../../img/logo.png">
+	<link rel="shortcut icon" href="../img/logo.png">
 	<!-- Author Meta -->
 	<meta name="author" content="nguyen">
 	<!-- Meta Description -->
@@ -19,20 +20,20 @@
 	<meta charset="UTF-8">
 	<!-- Site Title -->
 	<title id="title"></title>
-	<script>April, 2019</script>
+	<script>Notes</script>
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Roboto:400,500" rel="stylesheet">
 	<!--
 			CSS
 			============================================= -->
-	<link rel="stylesheet" title="calendar" href="../../css/calendar.css">
-	<link rel="stylesheet" href="../../css/linearicons.css">
-	<link rel="stylesheet" href="../../css/font-awesome.min.css">
-	<link rel="stylesheet" href="../../css/bootstrap.css">
-	<link rel="stylesheet" href="../../css/magnific-popup.css">
-	<link rel="stylesheet" href="../../css/nice-select.css">
-	<link rel="stylesheet" href="../../css/animate.min.css">
-	<link rel="stylesheet" href="../../css/owl.carousel.css">
-	<link rel="stylesheet" href="../../css/main.css">
+	<link rel="stylesheet" title="calendar" href="../css/calendar.css">
+	<link rel="stylesheet" href="../css/linearicons.css">
+	<link rel="stylesheet" href="../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../css/bootstrap.css">
+	<!--link rel="stylesheet" href="../css/magnific-popup.css">
+	<link rel="stylesheet" href="../css/nice-select.css">
+	<link rel="stylesheet" href="../css/animate.min.css">
+	<link rel="stylesheet" href="../css/owl.carousel.css"-->
+	<link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body>
@@ -41,27 +42,15 @@
 		<div class="container box_1800 main-menu">
 			<div class="row align-items-center justify-content-between d-flex">
 				<div id="logo">
-					<a href="index.html"><img src="../../img/logo.png" alt="" title="" /></a>
+					<a href="index.html"><img src="../img/logo.png" alt="" title="" /></a>
 				</div>
 				<nav id="nav-menu-container">
 					<ul class="nav-menu">
-						<li><a href="#">Top</a></li>
-						<li class="menu-active"><a href="../../index.html">Home</a></li>
-						<li><a href="../../notes.html">Notes</a></li>
-						<li><a href="../../projects.html">Projects</a></li>
-						<!--<li><a href="category.html">Category</a></li>
-						<li><a href="archive.html">Archive</a></li>
-						<li class="menu-has-children"><a href="">Pages</a>
-							<ul>
-								<li><a href="elements.html">Elements</a></li>
-							</ul>
-						</li>
-						<li class="menu-has-children"><a href="">Blog</a>
-							<ul>
-								<li><a href="blog-details.html">Blog Details</a></li>
-							</ul>
-						</li>-->
-						<li><a href="../../contact.html">Contact</a></li>
+						<li><a href="#"><b>Top</b></a></li>
+						<li class="menu-active"><a href="../index.html">Home</a></li>
+						<li><a href="notes.html">Notes</a></li>
+						<li><a href="projects.html">Projects</a></li>
+						<li><a href="../contact.html">Contact</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -75,12 +64,6 @@
         <div class="container">
             <div class="row d-flex align-items-center justify-content-center">
                 <div class="about-content col-lg-12">
-                    <!--h1 class="text-black">
-                        Blog template Ver. 0.1
-                    </h1>
-                    <p class="text-black link-nav"><a href="index.html">Home </a> <span class="lnr lnr-arrow-right"></span>
-                        <a href="blog-details.html">
-                            Blog Details</a></p-->
                 </div>
             </div>
         </div>
@@ -93,13 +76,11 @@
             <div class="row d-flex align-items-center justify-content-center">
                 <div class="col-lg-8">
                     <div class="main_blog_details">
-						<div class="d-flex">
-                            <img class="center" height="500" src="April/sakura.jpg" alt="">
-                        </div>
-                        <h1>April, 2019</h1>
+                        <h4>List of notes</h4>
                         <div class="user_details">
                             <div class="float-left">
-                                <a>Logs</a>
+                                <a>Work</a>
+                                <a>Notes</a>
                             </div>
                             <div class="float-right">
                                 <div class="media">
@@ -111,25 +92,21 @@
 											var days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thuday", "Friday", "Saturday"];
 											var cd = new Date(create);
 											var ud = new Date(update);
-											document.getElementById("create_date").innerHTML="<b>Created: </b>"+days[cd.getDay()]+", "+months[cd.getMonth()]+" "+cd.getDate()+", "+cd.getFullYear();
+											document.getElementById("create_date").innerHTML="<b class=\"text-black\">Created: </b>"+days[cd.getDay()]+", "+months[cd.getMonth()]+" "+cd.getDate()+", "+cd.getFullYear();
 											document.getElementById("update_date").innerHTML="<b>Updated: </b>"+days[ud.getDay()]+", "+months[ud.getMonth()]+" "+ud.getDate()+", "+ud.getFullYear();
 										</script>
                                     </div>
-                                    
+                                    <div class="d-flex">
+                                        
+                                    </div>
                                 </div>
                             </div>
                         </div>
-						<ul>
-							<li id="04012019"><h2>04/01/2019</h2>
-								<h3><a href="../notes/zenkei_ai_api.html" target="_blank" alt="">Zenkei_AI API</a></h3>
-							</li><hr>
-							<li id="04022019"><h2>04/02/2019</h2>
-								<h3><a href="../projects/Project1-AutoPlayerGenerator.html" target="_blank">PROJECT 1 - Zenkei Auto Player Generater</a></h3>
-							</li>							
+                        <ul>
+							<li><h2><a href="projects/Project1-AutoPlayerGenerator.html">PROJECT 01 - Zenkei Auto Player Generator</a></h2></li>
 						</ul>
                     </div>
-                </div>
-
+                </div>                
             </div>
         </div>
     </section>
@@ -137,7 +114,7 @@
 
     <!-- start footer Area -->
 	<footer class="footer-area section-gap">
-		<div class="container box_1170">
+		<div class="container box_1170">			
 			<div class="row footer-bottom d-flex justify-content-between align-items-center">
 				<p class="col-lg-12 footer-text text-center"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
@@ -147,6 +124,21 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	</footer>
 	<!-- End footer Area -->
 
+    <!--script src="../js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="../js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+    <script src="../js/easing.min.js"></script>
+    <script src="../js/hoverIntent.js"></script>
+    <script src="../js/superfish.min.js"></script>
+    <script src="../js/jquery.ajaxchimp.min.js"></script>
+    <script src="../js/jquery.magnific-popup.min.js"></script>
+    <script src="../js/owl.carousel.min.js"></script>
+    <script src="../js/jquery.nice-select.min.js"></script>
+    <script src="../js/waypoints.min.js"></script>
+    <script src="../js/mail-script.js"></script-->
+    <!--script src="../js/main.js"></script-->
 </body>
 
 </html>

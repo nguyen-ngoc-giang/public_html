@@ -3,7 +3,7 @@
 <!-- ********************************************************************************Remember to edit this****************************************************************** -->
 <script>
 	var create="03/26/2019"
-	var update="03/26/2019"
+	var update="04/02/2019"
 </script> 
 <head>
 	<!-- Mobile Specific Meta -->
@@ -21,6 +21,7 @@
 	<!-- Site Title -->
 	<title id="title"></title>
 	<script>html-basic</script>
+	<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Roboto:400,500" rel="stylesheet">
 	<!--
 			CSS
@@ -105,16 +106,19 @@
                             </div>
                         </div>
 						<ul>
-							<li><h2>Basic HTML Structure</h2></li>
-							<pre><code>
+							<li><h2>Basic HTML Structure</h2>
+							<pre>
+								<code>
 &lt;html&gt;
 	&lt;head&gt;
-	&lt;title&gt;website title&lt;/title&gt;
+		&lt;title&gt;website title&lt;/title&gt;
 	&lt;/head&gt;
 	&lt;body&gt;
 		content of website ...
 	&lt;/body&gt;
 &lt;/html&gt;
+								</code>
+							</pre>
 	<table>
 	<tbody><tr><th class="head3" id="basics"><h2>Common Tags for Blogs</h2></th>
 	<tr><td class="code">&lt;h?&gt; heading &lt;/h?&gt;</td><td>Heading (h1 for largest to h6 for smallest)</td></tr>
@@ -317,8 +321,43 @@
 	<tr><td class="codeindt">leftmargin="?" 	</td><td>Side Margin Size in Pixels (Internet Explorer) <a href="#superseded">(*)</a></td></tr>
 	<tr><td class="codeindt">topmargin="?" 	</td><td>Top Margin Size in Pixels (Internet Explorer) <a href="#superseded">(*)</a></td></tr>
 	</tbody></table><hr>
-	<div class="dash"><h3 id="superseded">(*) Important Note: </h3>
-		<p>Tags marked with (*) should still work, but have been superseded by<br><a href="http://www.simplehtmlguide.com/whatiscss.php">Cascading Style Sheets (CSS)</a>, which is now the recommended way to change the font, colour,<br>spacing, border or alignment of HTML elements.</p></div>
+								<div class="dash"><h3 id="superseded">(*) Important Note: </h3>
+									<p>Tags marked with (*) should still work, but have been superseded by<br><a href="http://www.simplehtmlguide.com/whatiscss.php">Cascading Style Sheets (CSS)</a>, which is now the recommended way to change the font, colour,<br>spacing, border or alignment of HTML elements.</p>
+								</div>
+							</li><hr class="sytle3">
+							<li>								
+								<h2><a href="https://www.codecogs.com/latex/integration/htmlequations.php">Equations in HTML (SVG + GIF)</a></h2>
+								<h3>&lt;IMG&gt; Tag (Editor type="html")</h3><hr class="style3">
+								<h5>GIF - 100 dpi</h5>
+								<blockquote class="generic-blockquote">
+									<code>&lt;img src="<i>http://latex.codecogs.com/gif.latex?f(x)=x^2</i>" border="0"&gt;</code>
+								</blockquote>
+								<p><b>Result: </b><img src="http://latex.codecogs.com/gif.latex?f(x)=x^2" border="0"/></p><hr class="style3">
+								<h5>SVG - vector-based graphic</h5>
+								<blockquote class="generic-blockquote">
+									<code>&lt;img src="<i>http://latex.codecogs.com/svg.latex?f(x)=x^2</i>" border="0"&gt;</code>
+								</blockquote>
+								<p><b>Result: </b><img src="http://latex.codecogs.com/svg.latex?f(x)=x^2" border="0"/></p><hr>
+								<h3>Automatic Equations for Whole Pages</h3>
+								<blockquote class="generic-blockquote">
+									<code>
+										&lt;script type="text/javascript" src="<i>http://latex.codecogs.com/latexit.js</i>"&gt;&lt;/script&gt;<br><br>
+										&lt;div lang="latex"&gt;<br>
+										f(x)=\frac{x^2}{1+x}<br>
+										&lt;/div&gt;<br><br>
+										or<br>
+										This equation &lt;span lang="latex"&gt;\frac{1+sin(x)}{x^3}&lt;/span&gt;
+									</code>
+								</blockquote>
+								<p><b>Result: </b>
+									<script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+									<div lang="latex">
+										f(x)=\frac{x^2}{1+x}
+									</div><br>
+									or <br>
+									This equation <span lang="latex">\frac{1+sin(x)}{x^3}</span>
+								</p><hr>
+							</li>
 						</ul>
                     </div>
                 </div>                
