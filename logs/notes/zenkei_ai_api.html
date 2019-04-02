@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+<!-- ********************************************************************************Remember to edit this****************************************************************** -->
+<script>
+	var create="04/01/2019"
+	var update="04/02/2019"
+</script> 
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="../../img/logo.png">
+	<!-- Author Meta -->
+	<meta name="author" content="nguyen">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title id="title"></title>
+	<script>Zenkei_AI API</script>
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Roboto:400,500" rel="stylesheet">
+	<!--
+			CSS
+			============================================= -->
+	<link rel="stylesheet" title="calendar" href="../../css/calendar.css">
+	<link rel="stylesheet" href="../../css/linearicons.css">
+	<link rel="stylesheet" href="../../css/font-awesome.min.css">
+	<link rel="stylesheet" href="../../css/bootstrap.css">
+	<link rel="stylesheet" href="../../css/magnific-popup.css">
+	<link rel="stylesheet" href="../../css/nice-select.css">
+	<link rel="stylesheet" href="../../css/animate.min.css">
+	<link rel="stylesheet" href="../../css/owl.carousel.css">
+	<link rel="stylesheet" href="../../css/main.css">
+	<link rel="stylesheet" href="../../css/two-columns.css">
+	<link rel="stylesheet" href="zenkei_ai_api/treestyles.css" type="text/css" />
+	<script type="text/javascript" src="zenkei_ai_api/marktree.js"> </script>
+</head>
+
+<body>
+	<!-- Start header Area -->
+	<header id="header">
+		<div class="container box_1800 main-menu">
+			<div class="row align-items-center justify-content-between d-flex">
+				<div id="logo">
+					<a href="index.html"><img src="../../img/logo.png" alt="" title="" /></a>
+				</div>
+				<nav id="nav-menu-container">
+					<ul class="nav-menu">
+						<li><a href="#">Top</a></li>
+						<li class="menu-active"><a href="../../index.html">Home</a></li>
+						<li><a href="../notes.html">Notes</a></li>
+						<li><a href="../../contact.html">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<!-- End header Area -->
+
+    <!-- start banner Area -->
+    <section class="banner-area relative section-gap">
+        <div class="overlay overlay-bg"></div>
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="about-content col-lg-12">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End banner Area -->
+
+    <!-- Blog Area -->
+    <section class="blog_area section-gap single-post-area">
+        <div class="container">
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="col-lg-8">
+                    <div class="main_blog_details">
+                        <object width="800" height="500" data="zenkei_ai_api/zenkei_ai.pdf"></object>
+                        <h1>Zenkei_AI API</h1>
+                        <div class="user_details">
+                            <div class="float-left">
+                                <a>AI</a>
+								<a>Python</a>
+								<a>Pytorch</a>
+                                <a>Notes</a>
+                            </div>
+                            <div class="float-right">
+                                <div class="media">
+                                    <div class="media-body">
+                                        <p id="create_date"></p>
+										<p id="update_date"></p>
+										<script>
+											var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+											var days = ["Sunday", "Monday", "Tueday", "Wednesday", "Thuday", "Friday", "Saturday"];
+											var cd = new Date(create);
+											var ud = new Date(update);
+											document.getElementById("create_date").innerHTML="<b>Created: </b>"+days[cd.getDay()]+", "+months[cd.getMonth()]+" "+cd.getDate()+", "+cd.getFullYear();
+											document.getElementById("update_date").innerHTML="<b>Updated: </b>"+days[ud.getDay()]+", "+months[ud.getMonth()]+" "+ud.getDate()+", "+ud.getFullYear();
+										</script>										
+                                    </div>
+                                    <div class="d-flex">
+                                        <!--img src="../../img/blog/user-img.jpg" alt=""-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						<div class="basetop"><a onclick="expandAll(document.getElementById('base'))" href="#">Expand</a> -
+<a onclick="collapseAll(document.getElementById('base'))" href="#">Collapse</a></div><div class="basetext" id="base"><ul>
+	<li class="col" id="FMID_281979332FM"><div class="nodecontent">zenkei_ai library</div>
+		<ul class="subexp">
+	<li class="col" id="FMID_1797146878FM"><div class="nodecontent">data_generator</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1854091997FM"><div class="nodecontent">read_mnist</div></li>
+	<li class="basic" id="FMID_1185465765FM"><div class="nodecontent">norm_angle</div></li>
+	<li class="basic" id="FMID_687784601FM"><div class="nodecontent">rotate_pano</div></li>
+	<li class="basic" id="FMID_115609618FM"><div class="nodecontent">image_ch_swap</div></li>
+	<li class="basic" id="FMID_407347590FM"><div class="nodecontent">distort_image_with_params</div></li>
+	<li class="basic" id="FMID_1583639628FM"><div class="nodecontent">distort_image</div></li>
+	<li class="col" id="FMID_908030189FM"><div class="nodecontent">data_generator</div>
+		<ul class="subexp">
+	<li class="col" id="FMID_975452917FM"><div class="nodecontent">batch_size</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1498808194FM"><div class="nodecontent">the size of a batch</div></li></ul></li>
+	<li class="col" id="FMID_576119655FM"><div class="nodecontent">file_list</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_111153924FM"><div class="nodecontent">a list of filenames of images</div></li></ul></li>
+	<li class="col" id="FMID_1220398887FM"><div class="nodecontent">label_list</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_104228030FM"><div class="nodecontent">a list of the label corresponding to file_list</div></li></ul></li>
+	<li class="col" id="FMID_629577270FM"><div class="nodecontent">shuffle=False</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1342579858FM"><div class="nodecontent">shuffle the sequence of data</div></li></ul></li>
+	<li class="col" id="FMID_19049446FM"><div class="nodecontent">is_gray_image=False</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1799804886FM"><div class="nodecontent">the image data are formed as 1 channel array</div></li></ul></li>
+	<li class="col" id="FMID_148517244FM"><div class="nodecontent">bgr=False</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1049256293FM"><div class="nodecontent">set True if the order of image channel should be BGR otherwise it is RGB</div></li></ul></li>
+	<li class="col" id="FMID_1128262923FM"><div class="nodecontent">fixed_norm=None</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_973710625FM"><div class="nodecontent">If None: normalize the pixel value for each image</div></li>
+	<li class="basic" id="FMID_395296516FM"><div class="nodecontent">otherwise, use  'fixed_norm[0]' for the mean, fixed_norm[1] for the standard deviation</div></li></ul></li>
+	<li class="col" id="FMID_645116837FM"><div class="nodecontent">no_std_norm=False</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1655564572FM"><div class="nodecontent">If fixed_norm is not None, this has no effect</div></li>
+	<li class="col" id="FMID_450972315FM"><div class="nodecontent">otherwise, if set True, pixels are not divided by their standard deviation</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1108768913FM"><div class="nodecontent">True: [-128, 128]</div></li>
+	<li class="basic" id="FMID_279578289FM"><div class="nodecontent">False: [-1, 1]</div></li></ul></li></ul></li>
+	<li class="col" id="FMID_1591853912FM"><div class="nodecontent">min_max_norm=False</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1326347004FM"><div class="nodecontent">If set True, fixed_norm and no_std_norm are ignored</div></li>
+	<li class="basic" id="FMID_1660801795FM"><div class="nodecontent">the pixel values are normalized to [0,1] by the minimum and the maximum</div></li></ul></li>
+	<li class="exp" id="FMID_1610972772FM"><div class="nodecontent">ouput_format='numpy'</div>
+		<ul class="sub">
+	<li class="basic" id="FMID_1032804365FM"><div class="nodecontent">'numpy' or 'torch'</div></li></ul></li>
+	<li class="basic" id="FMID_1379215566FM"><div class="nodecontent">image_size</div></li>
+	<li class="basic" id="FMID_562353970FM"><div class="nodecontent">keep_aspect_ratio</div></li>
+	<li class="basic" id="FMID_1098795377FM"><div class="nodecontent">flip_horizontal</div></li>
+	<li class="basic" id="FMID_1410755397FM"><div class="nodecontent">flip_vertical</div></li>
+	<li class="basic" id="FMID_1757514207FM"><div class="nodecontent">dist_zoom</div></li>
+	<li class="basic" id="FMID_1106965646FM"><div class="nodecontent">dist_zoom_max</div></li>
+	<li class="basic" id="FMID_1999426317FM"><div class="nodecontent">dist_rot</div></li>
+	<li class="basic" id="FMID_1918215714FM"><div class="nodecontent">dist_rot_max</div></li>
+	<li class="basic" id="FMID_699177671FM"><div class="nodecontent">dist_rot_n</div></li>
+	<li class="basic" id="FMID_633868061FM"><div class="nodecontent">dist_shift_x</div></li>
+	<li class="basic" id="FMID_1024544412FM"><div class="nodecontent">dist_shift_y</div></li></ul></li>
+	<li class="basic" id="FMID_1559938485FM"><div class="nodecontent">np_data_generator</div></li>
+	<li class="basic" id="FMID_1138241581FM"><div class="nodecontent">img_to_img_data_generator</div></li></ul></li>
+	<li class="col" id="FMID_80364585FM"><div class="nodecontent">torch_utils</div>
+		<ul class="subexp">
+	<li class="exp" id="FMID_1525421920FM"><div class="nodecontent">accuracy(outputs, labels)</div>
+		<ul class="sub">
+	<li class="basic" id="FMID_1821938661FM"><div class="nodecontent">calculate accuracy from model "outputs" and target "labels"</div></li>
+	<li class="basic" id="FMID_1748460243FM"><div class="nodecontent">input: outputs, labels</div></li></ul></li>
+	<li class="basic" id="FMID_508240138FM"><div class="nodecontent">seq2seq_reg(ouput, xtra, loss, alpha, beta)</div></li>
+	<li class="exp" id="FMID_1954511500FM"><div class="nodecontent">plot_lrf(lrf_data, ylim, zlim, ax, with_points, with_errorbars)</div>
+		<ul class="sub">
+	<li class="basic" id="FMID_154083507FM"><div class="nodecontent">plot the result of the learning rate finder</div></li>
+	<li class="col" id="FMID_1499870537FM"><div class="nodecontent">inputs</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1789690699FM"><div class="nodecontent">lrf_data: list/tuple or str - the result of LR finder</div></li></ul></li></ul></li>
+	<li class="exp" id="FMID_1028015128FM"><div class="nodecontent">print_model_size(model)</div>
+		<ul class="sub">
+	<li class="basic" id="FMID_1087605265FM"><div class="nodecontent">print model size information (num_trainable_parameter, num_non_trainable_parameter,  total_num_parameter)</div></li></ul></li>
+	<li class="exp" id="FMID_1226569645FM"><div class="nodecontent">plot_history(history)</div>
+		<ul class="sub">
+	<li class="basic" id="FMID_833552876FM"><div class="nodecontent">plot training history of a model includes accuracy and loss</div></li></ul></li>
+	<li class="exp" id="FMID_445001123FM"><div class="nodecontent">plot_histories(hs, labels, scale_fixed, xrange, n_ave, logscale)</div>
+		<ul class="sub">
+	<li class="basic" id="FMID_1181493265FM"><div class="nodecontent">plot multiple history</div></li></ul></li>
+	<li class="col" id="FMID_815041972FM"><div class="nodecontent">Class: model</div>
+		<ul class="subexp">
+	<li class="exp" id="FMID_1035994445FM"><div class="nodecontent">init</div>
+		<ul class="sub">
+	<li class="basic" id="FMID_1931294379FM"><div class="nodecontent">model: torch.nn.Module</div></li>
+	<li class="basic" id="FMID_699482177FM"><div class="nodecontent">device: torch.device</div></li>
+	<li class="basic" id="FMID_143097884FM"><div class="nodecontent">opt_func: torch.optim</div></li>
+	<li class="col" id="FMID_1549780697FM"><div class="nodecontent">loss_dict: dictionary of the label (key) and the loss or metric function</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1327292336FM"><div class="nodecontent">eg: {'loss': F.cross_entropy, 'acc': accuracy}</div></li>
+	<li class="basic" id="FMID_1733032194FM"><div class="nodecontent">'loss' entry is mandatory</div></li></ul></li>
+	<li class="col" id="FMID_469636686FM"><div class="nodecontent">layer_groups</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1797308022FM"><div class="nodecontent">None or list/tuple</div></li>
+	<li class="basic" id="FMID_139252476FM"><div class="nodecontent">layer groups for which different LRs and/or momentums can be set</div></li></ul></li>
+	<li class="basic" id="FMID_1232895033FM"><div class="nodecontent">is_rnn: bool - set 'True' for RNN model which outputs extra elements</div></li>
+	<li class="basic" id="FMID_576863204FM"><div class="nodecontent">reg_seq2seq - only for RNN models to use regularization 'req_seq2seq'</div></li></ul></li>
+	<li class="exp" id="FMID_852461366FM"><div class="nodecontent">freeze_to(n)</div>
+		<ul class="sub">
+	<li class="basic" id="FMID_169358049FM"><div class="nodecontent">freeze to the n-th layer of the model</div></li>
+	<li class="basic" id="FMID_396687106FM"><div class="nodecontent">input: n</div></li></ul></li>
+	<li class="exp" id="FMID_647564181FM"><div class="nodecontent">unfreeze()</div>
+		<ul class="sub">
+	<li class="basic" id="FMID_143144676FM"><div class="nodecontent">unfreeze the whole model</div></li></ul></li>
+	<li class="col" id="FMID_1453966487FM"><div class="nodecontent">learning rate</div>
+		<ul class="subexp">
+	<li class="col" id="FMID_1265521628FM"><div class="nodecontent">find_lr</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_954167839FM"><div class="nodecontent">trn_iter: data loader providing input data as well as the labels</div></li>
+	<li class="col" id="FMID_923045694FM"><div class="nodecontent">ave_steps: Int - number of run to take ensemle average of the results</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1182714195FM"><div class="nodecontent">if 0 is given, losses are evaluated in a continuous mode where the weight are not reset for each lr</div></li>
+	<li class="basic" id="FMID_350151081FM"><div class="nodecontent">default is 1, no ensemble averaging</div></li></ul></li>
+	<li class="basic" id="FMID_1584270408FM"><div class="nodecontent">lr_steps: Int - steps to optimize for each lr value</div></li>
+	<li class="col" id="FMID_838357466FM"><div class="nodecontent">lr_factor: Float - the multiplicative factor for the learning rate for the next cycle</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_319105913FM"><div class="nodecontent">default value is 1.1</div></li></ul></li>
+	<li class="col" id="FMID_741873283FM"><div class="nodecontent">max_lr: Float - the maximum lr value to search</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_963301409FM"><div class="nodecontent">if None is given, searching is determined by the loss limit which is 4 times bigger than the initial loss value</div></li>
+	<li class="basic" id="FMID_1653452177FM"><div class="nodecontent">default: None</div></li></ul></li>
+	<li class="col" id="FMID_253016327FM"><div class="nodecontent">lrs: Float or list/tuple/np.array of Float - the initial value of the learning rates for LR finder</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_852636237FM"><div class="nodecontent">if list/tuple/np.array of Float is given, the length must be equal to the number of layer groups</div></li>
+	<li class="basic" id="FMID_893273660FM"><div class="nodecontent">default value: 1.0e-6</div></li></ul></li>
+	<li class="col" id="FMID_44652393FM"><div class="nodecontent">wds: Float or list/tuple/np.array of Float - weight decay factor</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_784049796FM"><div class="nodecontent">default value: 1.0e-7</div></li></ul></li>
+	<li class="col" id="FMID_1620277665FM"><div class="nodecontent">wd_type: Int </div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1260061776FM"><div class="nodecontent">'0' is given - AdamW type weight decay is used</div></li>
+	<li class="basic" id="FMID_1301112474FM"><div class="nodecontent">otherwise - conventional L2 regularization type is used</div></li></ul></li>
+	<li class="basic" id="FMID_1746638320FM"><div class="nodecontent">clip: None or Float - gradient clip value</div></li>
+	<li class="col" id="FMID_1180932338FM"><div class="nodecontent">grad_acc: Int - gradient accumulation factor</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_123119350FM"><div class="nodecontent">eg: '2' is given, updating parameters are applied once in 2 steps -&gt; batch size become twice</div></li>
+	<li class="basic" id="FMID_1367940717FM"><div class="nodecontent">default: 1</div></li></ul></li>
+	<li class="basic" id="FMID_72451904FM"><div class="nodecontent">verbose: Int</div></li></ul></li>
+	<li class="basic" id="FMID_1795008880FM"><div class="nodecontent">plot_lr</div></li>
+	<li class="basic" id="FMID_1499151749FM"><div class="nodecontent">get_lrf_data</div></li>
+	<li class="basic" id="FMID_632755995FM"><div class="nodecontent">save_lrf</div></li></ul></li>
+	<li class="col" id="FMID_1679428440FM"><div class="nodecontent">fit</div>
+		<ul class="subexp">
+	<li class="col" id="FMID_843609093FM"><div class="nodecontent">trn_iter</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1923670053FM"><div class="nodecontent">Training data loader</div></li></ul></li>
+	<li class="col" id="FMID_1029612488FM"><div class="nodecontent">val_iter=None</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1386628974FM"><div class="nodecontent">Validation data loader</div></li></ul></li>
+	<li class="col" id="FMID_693988722FM"><div class="nodecontent">epochs=1</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_654082994FM"><div class="nodecontent">Number of epoch for training</div></li></ul></li>
+	<li class="col" id="FMID_652734249FM"><div class="nodecontent">lrs=1e-3</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_2589669FM"><div class="nodecontent">Learning rate for training,</div></li>
+	<li class="basic" id="FMID_1815352868FM"><div class="nodecontent">If use_clr=True, this is the maximum (peak) value for the cycle</div></li></ul></li>
+	<li class="col" id="FMID_1665401039FM"><div class="nodecontent">wds=1e-7</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1153438060FM"><div class="nodecontent">Weight decay factor</div></li></ul></li>
+	<li class="col" id="FMID_12781900FM"><div class="nodecontent">wd_type=0</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_838910275FM"><div class="nodecontent">Weight decay type</div></li></ul></li>
+	<li class="col" id="FMID_1059248288FM"><div class="nodecontent">clip=1</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1808110690FM"><div class="nodecontent">Gradient clipping value</div></li></ul></li>
+	<li class="col" id="FMID_108452055FM"><div class="nodecontent">use_clr=True</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1422875700FM"><div class="nodecontent">Cyclical learning rate</div></li></ul></li>
+	<li class="col" id="FMID_1419947187FM"><div class="nodecontent">clr_lr_factor=10</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_282712824FM"><div class="nodecontent">ratio of peak LR value relative to the starting LR value</div></li></ul></li>
+	<li class="col" id="FMID_118630468FM"><div class="nodecontent">clr_peak=0.25</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1127937844FM"><div class="nodecontent">Position of the LR peak relative to the entire training epochs</div></li>
+	<li class="basic" id="FMID_1652616494FM"><div class="nodecontent">0.25 means 1/4</div></li></ul></li>
+	<li class="col" id="FMID_531508402FM"><div class="nodecontent">clr_final=0.075</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_180007767FM"><div class="nodecontent">Duration of the final annealing relative to the entire training epochs</div></li></ul></li>
+	<li class="col" id="FMID_857292963FM"><div class="nodecontent">clr_moms=(0.95, 0.85)</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1218625773FM"><div class="nodecontent">Values of optimizer's momentum at the beginning and at the peak of LR given by cl_peak</div></li></ul></li>
+	<li class="col" id="FMID_1680423111FM"><div class="nodecontent">grad_acc=1</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_694076470FM"><div class="nodecontent">Gradient accumulation factor</div></li></ul></li>
+	<li class="col" id="FMID_69466736FM"><div class="nodecontent">feacher_forcing=None</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_288536889FM"><div class="nodecontent">This is only for RNN mdoels.</div></li>
+	<li class="basic" id="FMID_1124285349FM"><div class="nodecontent">Number of epochs for which teacher forcing is used.</div></li></ul></li>
+	<li class="col" id="FMID_840118842FM"><div class="nodecontent">verbose=0</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1704940199FM"><div class="nodecontent">0: prints nothing</div></li>
+	<li class="basic" id="FMID_913146656FM"><div class="nodecontent">1: print current loss at each epoch</div></li>
+	<li class="basic" id="FMID_1210960520FM"><div class="nodecontent">2: also prints progress bars</div></li>
+	<li class="basic" id="FMID_1716024810FM"><div class="nodecontent">3: for google colaboratory</div></li></ul></li></ul></li>
+	<li class="exp" id="FMID_536075845FM"><div class="nodecontent">evaluate</div>
+		<ul class="sub">
+	<li class="col" id="FMID_1670984627FM"><div class="nodecontent">val_iter</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_830886281FM"><div class="nodecontent">Validation data loader</div></li></ul></li>
+	<li class="col" id="FMID_1952945357FM"><div class="nodecontent">eval_func</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_713102179FM"><div class="nodecontent">Function like eval_func(ouputs, labels) which returns preds and labels</div></li></ul></li>
+	<li class="basic" id="FMID_757616460FM"><div class="nodecontent">verbose=0</div></li></ul></li>
+	<li class="basic" id="FMID_642180673FM"><div class="nodecontent">save_weights(filename, best=True)</div></li>
+	<li class="basic" id="FMID_1520896336FM"><div class="nodecontent">load_weights(filename)</div></li></ul></li></ul></li></ul></li></ul></div>
+					</div>
+				</div>
+			</div>
+		</div>				
+    </section>
+    <!-- Blog Area -->
+
+    <!-- start footer Area -->
+	<footer class="footer-area section-gap">
+		<div class="container box_1170">			
+			<div class="row footer-bottom d-flex justify-content-between align-items-center">
+				<p class="col-lg-12 footer-text text-center"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		</div>
+	</footer>
+	<!-- End footer Area -->
+
+    <!--script src="../../../js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="../../../js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+    <script src="../../../js/easing.min.js"></script>
+    <script src="../../../js/hoverIntent.js"></script>
+    <script src="../../../js/superfish.min.js"></script>
+    <script src="../../../js/jquery.ajaxchimp.min.js"></script>
+    <script src="../../../js/jquery.magnific-popup.min.js"></script>
+    <script src="../../../js/owl.carousel.min.js"></script>
+    <script src="../../../js/jquery.nice-select.min.js"></script>
+    <script src="../../../js/waypoints.min.js"></script>
+    <script src="../../../js/mail-script.js"></script-->
+    <!--script src="../../../js/main.js"></script-->
+</body>
+
+</html>
