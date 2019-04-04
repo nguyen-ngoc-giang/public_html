@@ -114,6 +114,7 @@
 									<ul>
 										<li><a href="#04022019">Day 1: (04/02/2019)</a> Study the Model</li>
 										<li><a href="#04032019">Day 2: (04/03/2019)</a> Changing angle output: 16 classes -> (sine, cosine)</li>
+										<li><a href="#04042019">Day 3: (04/04/2019)</a> Adding random noise to the input</li>
 									</ul>
 								</li>
 								<li id="04022019">Day 1: (04/02/2019) Study the Model
@@ -480,7 +481,7 @@
 								</li>
 									</ul>
 								</li>
-								<li id="04032019">Day 2: (04/03/2019)
+								<li id="04032019">Day 2: (04/03/2019) Change angle output from categorical value to (sine, cosine) value
 									<ol>
 										<li><h2>Take a look at angle output data:</h2>
 											<ul>
@@ -524,9 +525,99 @@
 												</li>
 											</ul>
 										</li>
-										<li><h2>Change the model to output (sine, cosine) values for angles:</h2></li>
-										<li><h2>Result:</h2></li>
+										<li><h2>Change the model to output (sine, cosine) values for angles:</h2>
+											<ul>
+												<li>Change output layer in the PlayerNet model:
+													<ul>
+														<li><code>angle_conv_2</code> layer:
+															<p>
+																Old code:<br>
+																<code>self.angle_conv_2 = _ConvLayer(256, <b>N_ANGLE</b>, 2, p=dropout_angle)</code><br>
+																New code:<br>
+																<code>self.angle_conv_2 = _ConvLayer(256, <b>256</b>, 2, p=dropout_angle)</code>
+															</p>
+														</li>
+														<li><code>angle_res_3</code> layer:
+															<p>
+																Old code:<br>
+																<code>self.angle_res_3 =  self._res_block(<b>N_ANGLE</b>, <b>N_ANGLE</b>, n_angle, p=dropout_angle)</code><br>
+																New code:<br>
+																<code>self.angle_res_3 =  self._res_block(<b>256</b>, <b>256</b>, n_angle, p=dropout_angle)</code>
+															</p>
+														</li>
+														<li>Adding a FC layer after <code>angle_avgpool</code> layer:
+															<p><code>self.angle_fc = nn.Linear(256, 2)</code><br>
+																Because we have 2 output values: (sine, cosine), so output dimension of <code>Linear</code> layer is 2
+															</p>
+															<p>
+																In <code>forward()</code>:<br>
+																Adding this code: <code>x_angle = self.angle_fc(x_angle)</code>
+															</p>
+														</li>
+													</ul>
+												</li>
+												<li>Change the accuracy calculation for angle in <code>my_acc_angle</code> fucntion
+													<p>
+														Old code:<br>
+														<code><b>_, preds = torch.max(out_angle.data, 1)</b><br>
+																acc_angle = <b>(preds == ys_angle.data.view_as(preds)).float().sum() / ys_angle.size()[0]</b></code><br>
+														New code:<br>
+														<code>acc_angle = <b>acc_xy(out_angle, ys_angle)</b></code>
+													</p>
+												</li>
+												<li>Change the loss calculation for angle in <code>my_loss_angle</code> and <code>my_loss</code> function
+													<ul>
+														<li>in <code>my_loss_angle</code> and <code>my_loss</code>
+															<p>
+																Old code:<br>
+																<code>loss_angle = <b>torch.sum(sparse_crossentropy_with_logits(ys_angle, out_angle))</b></code><br>
+																New code:<br>
+																<code>loss_angle = <b>err_mean_distance_xy(out_angle, ys_angle)</b></code>
+															</p>
+														</li>
+														<li>in <code>my_loss</code>
+															<p>
+																Because (x,y) and (sine, cosine) now in same scale so try using no weight for losses<br>
+																Old code:<br>
+																<code>loss = loss_xy + <b>1.0e-6 * </b>loss_angle</code><br>
+																New code:<br>
+																<code>loss = loss_xy + loss_angle</code>
+															</p>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
+										<li><h2>First Result:</h2>
+											<p>
+												x,y accuracy: <b>descrease</b><br>
+												angle accuracy: <b>not change much</b><br>
+												<b>Good things:</b> angle val_loss not increase during training
+											</p>
+											<object width="800" height="1000" data="Project01-AutoPlayerGenerator/sin_cos_first_run.pdf"></object>
+										</li>
+										<li><h2>Add <code>F.sigmoid()</code> and <code>F.tanh()</code> to (x,y) and (sine,cosine) output</h2>
+											<p>
+												(x,y) output -> in range <b>[0,1]</b><br>
+												(sine, cosine) output -> range <b>[-1,1]</b><br>
+												<b>Result:</b><br>
+												Not much change<br>
+												<b>Good things:</b> no sometime extream increase in angle val_loss <br>
+												<object width="800" height="1000" data="Project01-AutoPlayerGenerator/sin_cos_sigmoid+tanh_output.pdf"></object>
+											</p>
+										</li>
+										<li>In calculating loss, reuse the weight: multiply <code>angle_loss</code> with <b>1e-3</b>
+											<p>
+												<b>Good thing:</b> x,y accuracy recovers to ~90%<br>
+												<object width="800" height="1000" data="Project01-AutoPlayerGenerator/sin_cos_sigmoid+tanh_output_1e-3angleloss.pdf"></object>
+											</p>
+										</li>
 									</ol>									
+								</li>
+								<li id="04042019">Day 3: (04/04/2019) Adding random noise to the input
+									<ol>
+										<li></li>
+									</ol>
 								</li>
 							</ul>
 						</div>
