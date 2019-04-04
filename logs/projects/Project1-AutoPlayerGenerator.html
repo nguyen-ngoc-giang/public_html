@@ -616,7 +616,49 @@
 								</li>
 								<li id="04042019">Day 3: (04/04/2019) Adding random noise to the input
 									<ol>
-										<li></li>
+										<li>Adding random noise to an image:
+											<p>
+												Code to add Gaussian noise to an image<br>
+												<code>new_xs = xs[0][2] + torch.zeros(xs[0][2].shape).data.normal_(0, 0.1)</code><br>
+												<table>
+													<tr>
+														<th>Original image</th>
+														<th>Noise added image</th>
+													</tr>
+													<tr>
+														<td><img src="Project01-AutoPlayerGenerator/fp_normal.JPG"/></td>
+														<td><img src="Project01-AutoPlayerGenerator/fp_noise.JPG"/></td>
+													</tr>
+												</table>
+											</p>
+										</li>
+										<li>Adding random noise to input images:
+											<p>
+												In <code>data_generator</code> function:<br>
+												Add argument: <code>sigma</code> for the standard deviation value of Gaussian noise<br>
+												<code>
+													<p>
+													if sigma > 0 and output_format == 'torch':<br>
+                    								&nbsp;xs_fp = xs_fp + torch.zeros(xs_fp.shape).data.normal_(0, sigma)<br>
+													&nbsp;xs_pn = xs_pn + torch.zeros(xs_pn.shape).data.normal_(0, sigma)
+													</p>
+												</code>
+												!!! Only usable for 'torch' output (because not use 'numpy' output now so I will complete it later)
+											</p>
+										</li>
+										<li>Result:
+											<p>
+												It seem that angle val_loss still can be reduce
+												<object width="800" height="1000" data="Project01-AutoPlayerGenerator/sin_cos_sigmoid+tanh_output_1e-3angleloss_noise-0.1.pdf"></object>
+											</p>
+										</li>
+										<li>Run for 100 more epochs
+											<p>
+												Angle accuracy is <b>terrible!</b><br>
+												xy accuracy looks <b>good!</b><br>
+												<object width="800" height="1000" data="Project01-AutoPlayerGenerator/sin_cos_sigmoid+tanh_output_1e-3angleloss_noise-0.1_p100.pdf"></object>
+											</p>
+										</li>
 									</ol>
 								</li>
 							</ul>

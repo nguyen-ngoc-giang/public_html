@@ -771,7 +771,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 				cell = i%7;
 				brief_key=year.toString()+parse_month_date(month)+parse_month_date(i_date);
 				if (brief_key in brief) {
-					tbl.rows[row].cells[cell].innerHTML = "<a href=\"" + path_to_folder + ".html#"+ parse_month_date(month) + i_date.toString() + year.toString() + "\">" + brief[brief_key] + "<\a>";
+					tbl.rows[row].cells[cell].innerHTML = "<a href=\"" + path_to_folder + ".html#"+ parse_month_date(month) + parse_month_date(i_date) + year.toString() + "\">" + brief[brief_key] + "<\a>";
 				} else {
 					tbl.rows[row].cells[cell].innerHTML = "<a href=\"" + path_to_folder + ".html\">" + "" + "<\a>";
 				}

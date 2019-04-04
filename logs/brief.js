@@ -7,3 +7,4 @@ brief["20190329"] = "recommender systems<br>ZenkeiAI 03/2019 (continue)";
 brief["20190401"] = "ZenkeiAI API";
 brief["20190402"] = "Project01-AutoPlayer";
 brief["20190403"] = "Project01-AutoPlayer(angle -> sin,cos)";
+brief["20190404"] = "Project01-AutoPlayer(adding Gaussian noise)";
