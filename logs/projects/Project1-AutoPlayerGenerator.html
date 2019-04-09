@@ -115,6 +115,7 @@
 										<li><a href="#04022019">Day 1: (04/02/2019)</a> Study the Model</li>
 										<li><a href="#04032019">Day 2: (04/03/2019)</a> Changing angle output: 16 classes -> (sine, cosine)</li>
 										<li><a href="#04042019">Day 3: (04/04/2019)</a> Adding random noise to the input</li>
+										<li><a href="#04052019">Day 4: (04/05/2019)</a> Adding some fully connected layer for Angle prediction</li>
 									</ul>
 								</li>
 								<li id="04022019">Day 1: (04/02/2019) Study the Model
@@ -661,6 +662,118 @@
 										</li>
 									</ol>
 								</li>
+								<li id="04052019">Day 4: (04/05/2019) Adding some fully connected layers for Angle prediction
+									<ol>
+										<li>Adding some fully connected layer after <code>angle_avgpool</code> layer
+											<p>
+												<code>
+													self.angle_fc1 = nn.Linear(256, 128)<br>
+        											self.angle_fc2 = nn.Linear(128, 64)<br>
+        											self.angle_fc3 = nn.Linear(64, 32)<br>
+													self.angle_fc4 = nn.Linear(32, 2)<br>
+													<br>
+													x_angle = self.angle_fc1(x_angle)<br>
+        											x_angle = self.angle_fc2(x_angle)<br>
+        											x_angle = self.angle_fc3(x_angle)<br>
+        											x_angle = self.angle_fc4(x_angle)<br>
+												</code>
+											</p>
+											<p>Result:
+
+											</p>
+										</li>
+										<li>Adding relu and dropout layer after each fully connected layer
+											<p>
+												<code>
+													x_angle = self.angle_fc1(x_angle)<br>
+        											x = F.relu(x)<br>
+        											if self.dropout_angle > 0:<br>
+            										&emsp;x = F.dropout(x, p=self.dropout_angle, training=self.training)<br>
+        											x_angle = self.angle_fc2(x_angle)<br>
+        											x = F.relu(x)<br>
+        											if self.dropout_angle > 0:<br>
+            										&emsp;x = F.dropout(x, p=self.dropout_angle, training=self.training)<br>
+        											x_angle = self.angle_fc3(x_angle)<br>
+        											x = F.relu(x)<br>
+        											if self.dropout_angle > 0:<br>
+            										&emsp;x = F.dropout(x, p=self.dropout_angle, training=self.training)<br>
+        											x_angle = self.angle_fc4(x_angle)<br>
+												</code>
+											</p>
+											<p>Result:
+
+											</p>
+										</li>
+									</ol>
+								</li>
+								<li id="04082019">Day 4: (04/08/2019) Check some ideas
+								</li>
+								<li id="04092019">Day 4: (04/09/2019) Checking the original data
+									<ul>
+										<li>Dataset information file:
+											<p><code>dataset = joblib.load('../Data/ZENKEI/players.20170719/166/dataset-all_new.dump')</code></p>
+											<ul>
+												<li><code>len(dataset)</code> = 26588  = 6647*4 = (166, 166_rot090, 166_rot180, 166_rot_270)</li>
+												<li><p>1 row:<br>
+														<code>
+														(<br>
+														&emsp;b'Data/ZENKEI/players.20170719/166/55671/273249(108\xe3\x83\xbb203).jpg',<br>
+														&emsp;b'Data/ZENKEI/players.20170719/166/55671/273260(\xe3\x83\x88\xe3\x82\xa4\xe3\x83\xac).jpg',<br>
+														&emsp;0.3908532,<br>
+														&emsp;0.3797202,<br>
+														&emsp;-2.6212893071795866,<br>
+														&emsp;b'Data/ZENKEI/players.20170719/166/55671/273249.py2dump',<br>
+														&emsp;b'Data/ZENKEI/players.20170719/166/55671/273260.py2dump'<br>
+														)
+														</code>
+													</p>
+													<ul>
+														<li>1st row: <code>b'Data/ZENKEI/players.20170719/166/55671/273249(108\xe3\x83\xbb203).jpg'</code><br>
+															<p>
+																\xe3\x80\xbb &emsp; 〻<br>
+																<img width="200" height="300" src="Project01-AutoPlayerGenerator/dataset_fp.jpg">
+															</p>
+														</li>
+														<li>2st row: <code>b'Data/ZENKEI/players.20170719/166/55671/273260(\xe3\x83\x88\xe3\x82\xa4\xe3\x83\xac).jpg'</code><br>
+															<p>
+																\xe3\x83\x88 &emsp; ト<br>
+																\xe3\x82\xa4 &emsp; イ<br>
+																\xe3\x83\xac &emsp; レ<br>
+																<img width="500" height="200" src="Project01-AutoPlayerGenerator/dataset_pn.jpg">
+															</p>
+														</li>
+														<li>3rd row: <code>0.3908532</code>
+															<p>x in [0, 1]: &emsp; image_width &emsp; (n_col) <code>img.shape[1]*0.3908532</code> &emsp; x - left -> right</p>
+														</li>
+														<li>4rd row: <code>0.3797202</code>
+															<p>y in [0, 1]: &emsp; image_height &emsp; (n_row) <code>img.shape[0]*0.3797202</code> &emsp; y - top -> bottom</p>
+														</li>
+														<li>5th row: <code>-2.6212893071795866</code>
+															<p>angle in [<span lang="latex">-\pi</span>, <span lang="latex">\pi</span>]: <code>-2.6212893071795866</code> &emsp; &emsp; (clockwise) bottom: <span lang="latex">-\pi</span>	--> top: 0 --> bottom: <span lang="latex">\pi</span></p>
+														</li>
+														<li>6th and 7th row:
+															<p>
+																<code>dump_img0 = joblib.load(b'../Data/ZENKEI/players.20170719/166/55671/273249.py2dump')</code><br>
+																<code>dump_img0.shape</code>&emsp;&emsp;(25088,)&emsp;&emsp;<span lang="latex">25088 = 2^9*7^2</span>&emsp;??????????<br><br>
+																	
+																<code>dump_img1 = joblib.load(b'../Data/ZENKEI/players.20170719/166/55671/273260.py2dump')</code><br>
+																<code>dump_img1.shape</code>&emsp;&emsp;(25088,)&emsp;&emsp;<span lang="latex">25088 = 2^9*7^2</span>&emsp;??????????
+															</p>
+														</li>														
+													</ul>
+												</li>
+												<li>Distribution of x, y, angle of samples in 166 folder:
+													<img src="Project01-AutoPlayerGenerator/166_x_y_angl.jpg">
+												</li>
+												<li>Distribution of x, y, angle in all the dataset
+													<p>Because images are rotated 90, 180, and 270 degree --> x, y distribution are the same</p>
+													<img src="Project01-AutoPlayerGenerator/all_x_y_angl.jpg">
+												</li>
+											</ul>
+										</li>
+										<li>Data generation:</li>
+									</ul>
+								</li>								
 							</ul>
 						</div>
 					</div>
