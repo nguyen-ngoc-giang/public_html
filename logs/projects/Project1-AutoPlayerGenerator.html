@@ -771,7 +771,38 @@
 												</li>
 											</ul>
 										</li>
-										<li>Data generation:</li>
+									</ul>
+								</li>
+								<li id="04102019">Day 4: (04/10/2019) Generate angle0 data and do regression
+									<ul>
+										<li>Generate data:
+											<p>Using LANCZOS algorithm for image down-sizing instead of default NEAREST<br>
+												Some result of deferent resampling filter:<br>
+												<code>PIL.Image.NEAREST</code><br>
+												<img src="Project01-AutoPlayerGenerator/fp_nearest.jpg"><br>
+												<code>PIL.Image.BILINEAR</code><br>
+												<img src="Project01-AutoPlayerGenerator/fp_bilinear.jpg"><br>
+												<code>PIL.Image.BICUBIC</code><br>
+												<img src="Project01-AutoPlayerGenerator/fp_bicubic.jpg"><br>
+												<code>PIL.Image.LANCZOS</code><br>
+												<img src="Project01-AutoPlayerGenerator/fp_lanczos.jpg"><br>
+											</p>
+										</li>
+										<li>Regession:
+											<ul>
+												<li>Modify the <code>distort</code> function for regession anlge</li>
+												<li>Result:
+													<ul>
+														<li>200 epochs:<br>
+															<object width="800" height="1000" data="Project01-AutoPlayerGenerator/NGN-01_distort.pdf"></object>
+														</li>
+														<li>No Distort:<br>
+															<object width="800" height="1000" data="Project01-AutoPlayerGenerator/NGN-01.pdf"></object>
+														</li>
+													</ul>
+												</li>
+											</ul>
+										</li>
 									</ul>
 								</li>								
 							</ul>
